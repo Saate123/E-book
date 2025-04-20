@@ -7,7 +7,7 @@ import Img2 from "../assets/bird-and-shroom.webp"
 function Hero2() {
   return (
     <div
-      className="relative w-full min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center px-6 sm:px-12"
+      className="relative w-full min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center py-10 px-6 sm:px-12"
       style={{ backgroundImage: `url(${BackgroundImg})` }}
     >
       <div className="absolute inset-0 bg-[#080808] opacity-90 z-0"></div>
@@ -24,8 +24,8 @@ function Hero2() {
               <Link to="">FIND OUT MORE</Link>
             </button>
           </div>
-          <div className="absolute top-75 left-55">
-            <img src={Img2} alt="" className="w-[150px]" />
+          <div className="absolute lg:top-75 -bottom-8 left-55">
+            <img src={Img2} alt="" className="lg:w-[150px] w-[100px]" />
           </div>
         </div>
 

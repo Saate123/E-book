@@ -40,15 +40,15 @@ function Header() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="w-full bg-black shadow-md relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+    <header className="w-full bg-black shadow-md sticky top-0 z-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 flex justify-between ml-20 mr-20 items-center h-auto py-7">
         {/* Logo */}
         <Link to="/home" className="flex text-white">
           <div className="text-3xl font-bold">LINDA-X</div>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center text-white space-x-8">
+        <nav className="hidden md:flex items-center text-lg text-white space-x-8">
           <ul className="flex gap-6">
             {navLinks.map((link, index) => (
               <li key={index} className="relative group">
@@ -64,7 +64,7 @@ function Header() {
                   {link.submenu && (
                     <FaChevronDown
                       size={12}
-                      className="transition-transform duration-300 ml-2 group-hover:rotate-180"
+                      className="transition-transform duration-300 ml-3 group-hover:rotate-180"
                     />
                   )}
                 </Link>
