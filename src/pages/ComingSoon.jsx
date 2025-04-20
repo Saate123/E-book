@@ -25,7 +25,9 @@ const ComingSoon = () => {
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-[#ffe19c] flex flex-col justify-between">
       {/* Nav */}
       <nav className="flex justify-center px-6 md:px-12 py-6">
-        <div className="text-3xl font-bold">LINDA-X</div>
+        <Link to="/home">
+          <div className="text-3xl font-bold">LINDA-X</div>
+        </Link>
       </nav>
 
       {/* Hero Section */}
@@ -63,7 +65,7 @@ const ComingSoon = () => {
           )}
 
           <p className="text-black text-sm">
-            *Don’t worry we will not spam you ;)
+            *Don’t worry we will not spam you ;
           </p>
         </div>
 
