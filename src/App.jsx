@@ -2,7 +2,8 @@
 import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ComingSoon from "./components/ComingSoon";
+import ComingSoon from "./pages/ComingSoon";
+import Home from "./pages/Home";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<ComingSoon />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

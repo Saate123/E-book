@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa";
 import phoneMockup from "../assets/book.webp";
-import { Link } from "react-router"; // Replace with actual image
+import { Link } from "react-router";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const ComingSoon = () => {
   const [email, setEmail] = useState("");
@@ -82,7 +78,7 @@ const ComingSoon = () => {
       </main>
 
       {/* Footer */}
-      <footer className="px-6 md:px-12 py-8 flex flex-col md:flex-row items-center justify-between border-t text-gray-500 bg-yellow-50">
+      <footer className="px-6 md:px-12 py-8 flex flex-col md:flex-row items-center justify-between text-gray-500 bg-yellow-50">
         <div className="flex space-x-6 text-xl mb-4 md:mb-0">
           <Link to="https://www.facebook.com/share/16H5Kn7dHk/">
             <FaFacebookF className="hover:text-black cursor-pointer" />
