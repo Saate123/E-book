@@ -1,6 +1,6 @@
 import React from "react";
 import BackgroundImg from "../assets/background2.webp";
-import Img from "../assets/secrets.jpg";
+import Img from "../assets/TARI.jpeg.jpg";
 import { Link } from "react-router-dom";
 import Img2 from "../assets/bird-and-shroom.webp"
 
@@ -16,8 +16,9 @@ function Hero2() {
         {/* Text Content */}
         <div className="space-y-6 text-left lg:w-[700px] md:text-left">
           <h1 className="text-3xl sm:text-4xl text-[#E02B20] md:text-4xl leading-tight">
-            A chilling, mesmerising and darkly delicious novel inspired by real
-            events that took place in 17th century Italy
+            A captivating and enchanting tale inspired by ancient Ijaw legends,
+            Tari-Ere: The Picky Virgin will immerse you in a world of love,
+            mystery, and self-discovery.
           </h1>
           <div className="hidden md:block mt-6 justify-center">
             <button className="mt-4 bg-[#E02B20] text-black px-6 py-3 hover:bg-transparent hover:border-2 hover:border-[#E02B20] hover:text-[#E02B20] transition">

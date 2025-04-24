@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "../assets/Anna-New-BW.jpg";
+import Img from "../assets/FB_IMG_1743869048255.jpg";
 import BackgroundImg from "../assets/background3.jpg";
 
 function Newsletter() {

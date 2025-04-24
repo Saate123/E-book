@@ -1,34 +1,33 @@
 import React from "react";
 import BackgroundImg from "../assets/about-bg.jpg";
-import Img from "../assets/Anna-New-BW.jpg";
+import Img from "../assets/FB_IMG_1743869048255.jpg";
 
 function AboutUs() {
   return (
     <div
-      className="relative w-full min-h-[100vh] bg-cover bg-center bg-no-repeat flex items-center justify-center px-4"
+      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center px-4"
       style={{ backgroundImage: `url(${BackgroundImg})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#080808] opacity-90 z-0"></div>
+      <div className="absolute inset-0 bg-[#080808] opacity-90 z-0" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 py-16 px-[10px] text-white">
+      <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 py-16 px-4 text-white">
         {/* Image Section */}
-        <div className="flex justify-center md:justify-end">
+        <div className="flex justify-center items-start">
           <img
             src={Img}
-            alt="Anna"
-            className="h-[450px] w-[350px] shadow-lg object-cover"
+            alt="Linda"
+            className="w-full max-w-[350px] md:h-[450px] object-cover shadow-xl rounded-sm"
           />
         </div>
 
         {/* Text Section */}
-        <div className="p-6 bg-[#2E2E2E] bg-opacity-90 shadow-md w-2xl">
-          <h3 className="text-3xl sm:text-4xl md:text-5xl p-3 text-white mb-6 bg-[#A72024] ">
-            About Anna
+        <div className="bg-[#2E2E2E] bg-opacity-90 p-6 shadow-lg rounded-sm">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 bg-[#A72024] p-3">
+            About Linda
           </h3>
-
-          <div className="space-y-5 text-lg leading-relaxed">
+          <div className="space-y-4 text-base sm:text-lg leading-relaxed">
             <p>
               Anna is an award-winning writer of historical, Gothic and crime
               fiction. She also writes legal/political thrillers under the name

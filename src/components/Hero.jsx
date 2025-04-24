@@ -1,6 +1,6 @@
 import React from "react";
 import BackgroundImg from "../assets/background.jpg";
-import Img from "../assets/notes.jpg";
+import Img from "../assets/WOYINGI.jpeg.jpg";
 import { Link } from "react-router-dom";
 
 function Hero() {
@@ -15,16 +15,14 @@ function Hero() {
         {/* Text Content */}
         <div className="space-y-6 text-left lg:w-[700px] md:text-left">
           <h1 className="text-3xl sm:text-4xl text-[#D7FF00] md:text-4xl leading-tight">
-            The first Anna Sharpe book, a fast-paced and razor-sharp thriller,
-            is out now!
+            The first book in Linda’s captivating spiritual series, Woyingi: God
+            is a Woman, is out now!
           </h1>
           <p className="text-lg md:text-xl">
-            ‘A high octane, page-turning thriller, but with characters who are
-            fully rounded human beings you care about. I really loved it’
+            “A thought-provoking exploration of the Divine, weaving together
+            history, spirituality, and culture. A powerful narrative that
+            challenges perceptions and celebrates the sacred feminine.”
           </p>
-          <h4 className="text-sm font-semibold tracking-wide">
-            JENNIE GODFREY
-          </h4>
           <div className="hidden md:block mt-6 justify-center">
             <button className="mt-4 bg-[#D7FF00] text-black px-6 py-3 hover:bg-transparent hover:border-2 hover:border-[#d7ff00] hover:text-[#d7ff00] transition">
               <Link to="">FIND OUT MORE</Link>
