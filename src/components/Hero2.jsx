@@ -8,6 +8,7 @@ function Hero2() {
   return (
     <div
       className="relative w-full min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center py-10 px-6 sm:px-12"
+      id="house-of-whispers"
       style={{ backgroundImage: `url(${BackgroundImg})` }}
     >
       <div className="absolute inset-0 bg-[#080808] opacity-90 z-0"></div>
@@ -22,7 +23,7 @@ function Hero2() {
           </h1>
           <div className="hidden md:block mt-6 justify-center">
             <button className="mt-4 bg-[#E02B20] text-black px-6 py-3 hover:bg-transparent hover:border-2 hover:border-[#E02B20] hover:text-[#E02B20] transition">
-              <Link to="">FIND OUT MORE</Link>
+              <a href="/book/house-of-whispers">FIND OUT MORE</a>
             </button>
           </div>
           <div className="absolute lg:top-75 -bottom-8 left-55">
@@ -32,17 +33,17 @@ function Hero2() {
 
         {/* Image Content */}
         <div className="flex justify-center md:justify-end">
-          <Link to="">
+          <a href="/book/house-of-whispers">
             <img
               src={Img}
               alt="Notes Cover"
               className="w-full max-w-xs sm:max-w-sm md:max-w-sm shadow-lg"
             />
-          </Link>
+          </a>
         </div>
 
         <div className="block md:hidden mt-6 order-3 w-full text-center">
-          <a href="">
+          <a href="/book/house-of-whispers">
             <button className="w-[180px] bg-[#E02B20] hover:bg-transparent hover:border hover:border-[#E02B20] text-black hover:text-[#E02B20] px-5 py-3 text-sm transition-all duration-300">
               FIND OUT MORE
             </button>

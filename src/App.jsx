@@ -8,6 +8,7 @@ import About from "./pages/About";
 import ContactMe from "./pages/ContactMe";
 import Articles from "./pages/Articles";
 import NewsEvents from "./pages/NewsEvents";
+import Book from "./pages/Books";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<ContactMe />} />
         <Route path="/events" element={<NewsEvents />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="//book/:bookId" element={<Book />} />
       </Routes>
     </BrowserRouter>
   );

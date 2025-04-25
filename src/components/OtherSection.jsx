@@ -1,6 +1,6 @@
 import React from "react";
-import Img from "../assets/house-of-whisperers.jpg";
-import Img2 from "../assets/The-Clockwork-Girl-OPT.jpg";
+import Img from "../assets/WOYINGI.jpeg.jpg";
+import Img2 from "../assets/TARI.jpeg.jpg";
 import Img3 from "../assets/The-Storykeepers-OPT.jpg";
 import Img4 from "../assets/Unseeingpaperback.jpg";
 

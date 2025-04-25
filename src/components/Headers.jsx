@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom"; // ✅ Fix here
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import "./Header.css"; // <-- Add this line
+import "./Header.css";
 import { RiArrowDownSLine } from "react-icons/ri";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const isBookRoute = location.pathname.startsWith("/book"); // ✅ Active check for /book/anything
 
   const navClass = ({ isActive }) =>
     isActive
@@ -24,29 +26,25 @@ const Header = () => {
           </NavLink>
 
           <div className="relative group dropdown-container">
-            <NavLink
-              to="/book"
-              className={({ isActive }) =>
-                `${navClass({ isActive })} flex items-center`
-              }
+            <span
+              className={`flex items-center cursor-pointer transition duration-300 ${
+                isBookRoute
+                  ? "text-[#CCFF00] font-bold"
+                  : "hover:text-[#A72024]"
+              }`}
             >
               Books <RiArrowDownSLine className="ml-2" />
-            </NavLink>
+            </span>
 
             <div className="dropdown-menu">
               <ul className="space-y-2 text-white text-sm tracking-wide">
                 <li>
-                  <NavLink to="/books" className={navClass}>
-                    Linda-X Books
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/anna-sharpe" className={navClass}>
+                  <NavLink to="/book/book-of-secrets" className={navClass}>
                     Woyingi: God is a Woman
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/book-of-secrets" className={navClass}>
+                  <NavLink to="/book/house-of-whispers" className={navClass}>
                     Tari-Ere: The Picky Virgin
                   </NavLink>
                 </li>
@@ -94,20 +92,19 @@ const Header = () => {
               </NavLink>
 
               <div>
-                <p className="text-white">Books</p>
+                <span
+                  className={`flex items-center transition duration-300 ${
+                    isBookRoute
+                      ? "text-[#CCFF00] font-bold"
+                      : "hover:text-[#A72024]"
+                  }`}
+                >
+                  Books <RiArrowDownSLine className="ml-2" />
+                </span>
                 <ul className="ml-4 mt-2 space-y-2 text-sm">
                   <li>
                     <NavLink
-                      to="/anna-sharpe"
-                      className={navClass}
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Linda-X Books
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/book-of-secrets"
+                      to="/book/book-of-secrets"
                       className={navClass}
                       onClick={() => setMenuOpen(false)}
                     >
@@ -116,7 +113,7 @@ const Header = () => {
                   </li>
                   <li>
                     <NavLink
-                      to="/house-of-whispers"
+                      to="/book/house-of-whispers"
                       className={navClass}
                       onClick={() => setMenuOpen(false)}
                     >
