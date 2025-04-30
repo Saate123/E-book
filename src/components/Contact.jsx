@@ -42,30 +42,16 @@ function Contact() {
           <p>Do get in touch.</p>
           <p>
             Write to me at{" "}
-            <a href="mailto:anna@annamazzola.com" className="underline">
-              anna@annamazzola.com
+            <a href="mailto: hello@linda-x.com" className="text-[#a72024] hover:underline">
+              hello@linda-x.com
             </a>{" "}
             or contact me on social media below.
           </p>
           <p>
-            For events and publicity contact Sarah Lundy at Orion Publishing:{" "}
-            <a href="mailto:sarah.lundy@orionbooks.co.uk" className="underline">
-              sarah.lundy@orionbooks.co.uk
+            For events and publicity contact me directly:{" "}
+            <a href="mailto:booklinda@linda-x.com" className="text-[#a72024] hover:underline">
+              booklinda@linda-x.com.
             </a>
-          </p>
-          <p>
-            My literary agent is{" "}
-            <a href="#" className="underline">
-              Juliet Mushens
-            </a>{" "}
-            at Mushens Entertainment.
-          </p>
-          <p>
-            My TV agent is{" "}
-            <a href="#" className="underline">
-              Emily Hayward-Whitlock
-            </a>{" "}
-            at The Artists' Partnership.
           </p>
           <p className="text-center font-semibold">Say hello on social media</p>
           <div className="flex justify-center gap-4 text-2xl">

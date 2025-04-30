@@ -39,12 +39,18 @@ const Header = () => {
             <div className="dropdown-menu">
               <ul className="space-y-2 text-white text-sm tracking-wide">
                 <li>
-                  <NavLink to="/book/book-of-secrets" className={navClass}>
+                  <NavLink
+                    to="/book/woyingi-god-is-a-woman"
+                    className={navClass}
+                  >
                     Woyingi: God is a Woman
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/book/house-of-whispers" className={navClass}>
+                  <NavLink
+                    to="/book/tari-ere-the-picky-virgin"
+                    className={navClass}
+                  >
                     Tari-Ere: The Picky Virgin
                   </NavLink>
                 </li>
@@ -104,7 +110,7 @@ const Header = () => {
                 <ul className="ml-4 mt-2 space-y-2 text-sm">
                   <li>
                     <NavLink
-                      to="/book/book-of-secrets"
+                      to="/book/woyingi-god-is-a-woman"
                       className={navClass}
                       onClick={() => setMenuOpen(false)}
                     >
@@ -113,7 +119,7 @@ const Header = () => {
                   </li>
                   <li>
                     <NavLink
-                      to="/book/house-of-whispers"
+                      to="/book/tari-ere-the-picky-virgin"
                       className={navClass}
                       onClick={() => setMenuOpen(false)}
                     >

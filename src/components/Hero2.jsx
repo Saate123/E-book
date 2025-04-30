@@ -1,7 +1,6 @@
 import React from "react";
 import BackgroundImg from "../assets/background2.webp";
 import Img from "../assets/TARI.jpeg.jpg";
-import { Link } from "react-router-dom";
 import Img2 from "../assets/bird-and-shroom.webp"
 
 function Hero2() {
@@ -23,7 +22,7 @@ function Hero2() {
           </h1>
           <div className="hidden md:block mt-6 justify-center">
             <button className="mt-4 bg-[#E02B20] text-black px-6 py-3 hover:bg-transparent hover:border-2 hover:border-[#E02B20] hover:text-[#E02B20] transition">
-              <a href="/book/house-of-whispers">FIND OUT MORE</a>
+              <a href="/book/tari-ere-the-picky-virgin">FIND OUT MORE</a>
             </button>
           </div>
           <div className="absolute lg:top-75 -bottom-8 left-55">
@@ -33,7 +32,7 @@ function Hero2() {
 
         {/* Image Content */}
         <div className="flex justify-center md:justify-end">
-          <a href="/book/house-of-whispers">
+          <a href="/book/tari-ere-the-picky-virgin">
             <img
               src={Img}
               alt="Notes Cover"
@@ -43,7 +42,7 @@ function Hero2() {
         </div>
 
         <div className="block md:hidden mt-6 order-3 w-full text-center">
-          <a href="/book/house-of-whispers">
+          <a href="/book/tari-ere-the-picky-virgin">
             <button className="w-[180px] bg-[#E02B20] hover:bg-transparent hover:border hover:border-[#E02B20] text-black hover:text-[#E02B20] px-5 py-3 text-sm transition-all duration-300">
               FIND OUT MORE
             </button>

@@ -29,40 +29,34 @@ function AboutUs() {
           </h3>
           <div className="space-y-4 text-base sm:text-lg leading-relaxed">
             <p>
-              Anna is an award-winning writer of historical, Gothic and crime
-              fiction. She also writes legal/political thrillers under the name
-              Anna Sharpe, the first of which, <em>NOTES ON A DROWNING</em>, is
-              published by Orion in January 2025.
+              Linda Somiari-Stewart is a Nigerian journalist-turned-griot with a
+              passion for preserving Africa’s rich storytelling traditions. With
+              an extensive background in both print and television media, she
+              has dedicated her life to reviving the fading art of African oral
+              narratives through the written word. Her works, including{" "}
+              <em>
+                Woyingi: God Is a Woman and The Legend of Tari-Ere: The Picky
+                Virgin,
+              </em>
+              celebrate African folklore while challenging conventional ideas
+              about spirituality, gender, and identity.
             </p>
             <p>
-              Anna regularly appears at literary festivals and events and gives
-              talks and teaches workshops on creative writing. She has
-              previously tutored at The Novelry and The Arvon Foundation.
+              Drawing deeply from her Ijaw heritage, Somiari-Stewart’s
+              storytelling is both personal and universal, weaving myth,
+              history, and philosophy into rich, lyrical narratives. Her
+              exploration of the divine feminine and her commitment to cultural
+              authenticity position her as a powerful voice in contemporary
+              African literature.
             </p>
             <p>
-              Her debut novel, <em>THE UNSEEING</em>, won an Edgar Allan Poe
-              award. Her fourth novel, <em>THE HOUSE OF WHISPERS</em>, won a
-              Fingerprint Award for Best Historical Crime. Her bestselling third
-              novel, <em>THE CLOCKWORK GIRL</em>, was shortlisted for two CWA
-              Dagger awards and a Fingerprint Award, and nominated for the
-              Dublin Literary award.
+              Through her writing, Linda Somiari-Stewart invites readers to
+              reconnect with ancestral wisdom, rethink entrenched narratives,
+              and discover the timeless relevance of African myths in today’s
+              world. She continues to work on new projects that aim to keep the
+              spirit of African storytelling alive for future generations.
             </p>
-            <p>
-              Her fifth novel, <em>THE BOOK OF SECRETS</em>, is based on a real
-              case from 17th century Rome and was a{" "}
-              <strong>Times Historical Novel of the Month</strong> for March
-              2024.
-            </p>
-            <p>
-              When not writing, Anna works as a human rights and criminal
-              justice solicitor acting for survivors of crime. She is also a
-              volunteer for Doorstep Library, working with underprivileged
-              children.
-            </p>
-            <p>
-              She lives in South London, with one husband, two children, a black
-              cat and a snake.
-            </p>
+            <p>She is a widow, mother and grandmother.</p>
           </div>
         </div>
       </div>

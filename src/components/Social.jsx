@@ -39,7 +39,11 @@ function Social() {
             <Link to="https://www.instagram.com/lindasomiari?igsh=MWw1YjRnanBteDMybw==">
               <p className="text-xl font-semibold">lindasomiari</p>
             </Link>
-            <p className="text-sm">Writer. Very small. Also a Lawyer.</p>
+            <p className="text-sm">
+              Agro genie - Zero waste, Zero hunger. Exotic indulgence -taste of<br/>
+              Africa. The Griots… preservers of indigenous African culture and
+              traditions.
+            </p>
           </div>
         </div>
 
@@ -53,6 +57,18 @@ function Social() {
             <img
               src={Img2}
               alt="Instagram Post 1"
+              className="w-full h-[250px] object-cover rounded-md shadow-lg hover:scale-105 transition duration-300"
+            />
+          </Link>
+
+          <Link
+            to="https://www.instagram.com/lindasomiari?igsh=MWw1YjRnanBteDMybw=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={Img3}
+              alt="Instagram Post 2"
               className="w-full h-[250px] object-cover rounded-md shadow-lg hover:scale-105 transition duration-300"
             />
           </Link>
