@@ -23,7 +23,7 @@ function App() {
         <Route path="/contact" element={<ContactMe />} />
         <Route path="/events" element={<NewsEvents />} />
         <Route path="/articles" element={<Articles />} />
-        <Route path="//book/:bookId" element={<Book />} />
+        <Route path="/book/:bookId" element={<Book />} />
       </Routes>
     </BrowserRouter>
   );

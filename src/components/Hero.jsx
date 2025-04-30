@@ -6,7 +6,7 @@ function Hero() {
   return (
     <div
       className="relative w-full min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center px-6 sm:px-12"
-      id="book-of-secret"
+      id="woyingi-god-is-a-woman"
       style={{ backgroundImage: `url(${BackgroundImg})` }}
     >
       <div className="absolute inset-0 bg-[#1a1a1a] opacity-90 z-0"></div>

@@ -7,7 +7,7 @@ function Hero2() {
   return (
     <div
       className="relative w-full min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center py-10 px-6 sm:px-12"
-      id="house-of-whispers"
+      id="tari-ere-the-picky-virgin"
       style={{ backgroundImage: `url(${BackgroundImg})` }}
     >
       <div className="absolute inset-0 bg-[#080808] opacity-90 z-0"></div>
