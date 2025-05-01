@@ -121,7 +121,7 @@ const Book = () => {
       >
         {/* Overlay */}
         <div className="absolute inset-0 pr-4 bg-[#080808] opacity-90 z-0"></div>
-        <section className="relative z-10 flex flex-col lg:flex-row items-start gap-8 px-4 lg:px-12 py-10">
+        <section className="relative z-10 flex flex-col lg:flex-row items-start gap-8 px-4 py-10">
           <div className="text-white w-full lg:w-3/5 rounded-md mx-auto">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-6 bg-[#A72024] p-4">
               {book.title}
@@ -197,7 +197,7 @@ const Book = () => {
             )}
           </div>
 
-          <div className="w-full lg:w-[300px] flex-shrink-0 lg:pr-4">
+          <div className="w-full lg:w-[300px] flex-shrink-0 lg:mr-14">
             <img
               src={book.image}
               alt={book.title}
@@ -214,32 +214,33 @@ const Book = () => {
             </button>
           </div>
         </section>
-
-        <section className="relative z-10 w-full flex flex-col lg:flex-row items-center gap-2 px-4 py-10">
-          {/* Image with background box */}
-          <div className="flex justify-center w-full lg:w-1/3">
-            <div className="bg-[#262626] p-4 rounded-md shadow-lg">
-              <Link href={book.link}>
-                <img
-                  src={book.image}
-                  alt={book.title}
-                  className="w-40 sm:w-48 md:w-56 lg:w-40 xl:w-40 rounded shadow-md object-contain"
-                />
-              </Link>
-            </div>
-          </div>
-
-          {/* Text Content */}
-          <div className="w-full lg:w-1/2 space-y-4">
-            <div className="bg-[#262626] text-white text-center p-10 rounded-md shadow-md text-sm sm:text-base">
-              AUDIO EXTRACT COMING SOON.....
-            </div>
-            <div className="bg-[#262626] text-white text-left p-3 rounded-md shadow-md text-sm sm:text-base">
-              Read the first chapter free (click the image)
-            </div>
-          </div>
-        </section>
       </div>
+
+      <section className=" w-full flex flex-col bg-[#080808] lg:flex-row items-center gap-2 px-4 py-10">
+        {/* Image with background box */}
+        <div className="flex justify-center w-full lg:w-1/3">
+          <div className="bg-[#262626] p-4 rounded-md shadow-lg">
+            <Link to={book.link}>
+              <img
+                src={book.image}
+                alt={book.title}
+                className="w-40 sm:w-48 md:w-56 lg:w-40 xl:w-40 rounded shadow-md object-contain"
+              />
+            </Link>
+          </div>
+        </div>
+
+        {/* Text Content */}
+        <div className="w-full lg:w-1/2 space-y-4">
+          <div className="bg-[#262626] text-white text-center p-10 rounded-md shadow-md text-sm sm:text-base">
+            AUDIO EXTRACT COMING SOON.....
+          </div>
+          <div className="bg-[#262626] text-white text-left p-3 rounded-md shadow-md text-sm sm:text-base">
+            Read the first chapter free (click the image)
+          </div>
+        </div>
+      </section>
+
       <section
         className="relative w-full flex flex-col gap-8 py-10 items-center"
         style={{

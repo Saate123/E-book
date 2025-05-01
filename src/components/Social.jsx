@@ -1,9 +1,10 @@
 import React from "react";
 import BackgroundImg from "../assets/images.jpg";
 import { FaInstagram } from "react-icons/fa";
-import Img from "../assets/annamazzolawriter.webp";
-import Img2 from "../assets/img.webp";
-import Img3 from "../assets/img2.webp";
+import Img from "../assets/profile.jpg";
+import Img2 from "../assets/page3.jpg";
+import Img3 from "../assets/page2.jpg";
+import Img4 from "../assets/page.jpg";
 import { Link } from "react-router-dom";
 
 function Social() {
@@ -57,7 +58,7 @@ function Social() {
             <img
               src={Img2}
               alt="Instagram Post 1"
-              className="w-full h-[250px] object-cover rounded-md shadow-lg hover:scale-105 transition duration-300"
+              className="w-full h-[280px] object-cover rounded-md shadow-lg hover:scale-105 transition duration-300"
             />
           </Link>
 
@@ -69,7 +70,7 @@ function Social() {
             <img
               src={Img3}
               alt="Instagram Post 2"
-              className="w-full h-[250px] object-cover rounded-md shadow-lg hover:scale-105 transition duration-300"
+              className="w-full h-[280px] object-cover rounded-md shadow-lg hover:scale-105 transition duration-300"
             />
           </Link>
 
@@ -79,9 +80,9 @@ function Social() {
             rel="noopener noreferrer"
           >
             <img
-              src={Img3}
+              src={Img4}
               alt="Instagram Post 2"
-              className="w-full h-[250px] object-cover rounded-md shadow-lg hover:scale-105 transition duration-300"
+              className="w-full h-[280px] object-cover rounded-md shadow-lg hover:scale-105 transition duration-300"
             />
           </Link>
         </div>
