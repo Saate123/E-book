@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router";
 
 function Contact() {
   return (
@@ -42,43 +43,43 @@ function Contact() {
           <p>Do get in touch.</p>
           <p>
             Write to me at{" "}
-            <a href="mailto: hello@linda-x.com" className="text-[#a72024] hover:underline">
+            <Link href="mailto: hello@linda-x.com" className="text-[#a72024] hover:underline">
               hello@linda-x.com
-            </a>{" "}
+            </Link>{" "}
             or contact me on social media below.
           </p>
           <p>
             For events and publicity contact me directly:{" "}
-            <a href="mailto:booklinda@linda-x.com" className="text-[#a72024] hover:underline">
+            <Link href="mailto:booklinda@linda-x.com" className="text-[#a72024] hover:underline">
               booklinda@linda-x.com.
-            </a>
+            </Link>
           </p>
           <p className="text-center font-semibold">Say hello on social media</p>
           <div className="flex justify-center gap-4 text-2xl">
-            <a
+            <Link
               href="https://www.facebook.com/share/16H5Kn7dHk/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#a72024] p-2 rounded-full"
             >
               <FaFacebookF className="cursor-pointer" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.linkedin.com/in/linda-somiari-stewart-858556150?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#a72024] p-2 rounded-full"
             >
               <FaLinkedinIn className="cursor-pointer" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.instagram.com/lindasomiari?igsh=MWw1YjRnanBteDMybw=="
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#a72024] p-2 rounded-full"
             >
               <FaInstagram className="cursor-pointer" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,17 +1,15 @@
 import React from "react";
 import Header from "../components/Headers";
-import Hero from "../components/Hero";
-import Hero2 from "../components/Hero2";
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
 import OtherSection from "../components/OtherSection";
+import HeroPage from "../components/Hero";
 
 function Home() {
   return (
     <div>
       <Header />
-      <Hero />
-      <Hero2 />
+      <HeroPage />
       <OtherSection />
       <Newsletter />
       <Footer />

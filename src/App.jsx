@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import ComingSoon from "./pages/ComingSoon";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -15,7 +15,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<ComingSoon />} />
         <Route path="/home" element={<Home />} />
@@ -25,7 +25,7 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="/book/:bookId" element={<Book />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

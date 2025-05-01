@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Img from "../assets/WOYINGI.jpeg.jpg";
 import Img2 from "../assets/TARI.jpeg.jpg";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from "../components/Headers";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
@@ -219,13 +219,13 @@ const Book = () => {
           {/* Image with background box */}
           <div className="flex justify-center w-full lg:w-1/3">
             <div className="bg-[#262626] p-4 rounded-md shadow-lg">
-              <a href={book.link}>
+              <Link href={book.link}>
                 <img
                   src={book.image}
                   alt={book.title}
                   className="w-40 sm:w-48 md:w-56 lg:w-40 xl:w-40 rounded shadow-md object-contain"
                 />
-              </a>
+              </Link>
             </div>
           </div>
 
