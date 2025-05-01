@@ -51,7 +51,7 @@ const bookDetails = {
     bg: backgroundImage,
     picture: Img3,
     scribe: "Praise for Woyingi: God is a Woman",
-    link: "https://annamazzola.com/wp-content/uploads/2023/11/The-Book-of-Secrets-Chapter-1.pdf",
+    link: "https://docs.google.com/document/d/1w-e5com2ytLpSq62yGDoJmZLm9GgOrpZqqaMFu1doZg/edit?usp=sharing",
   },
   "tari-ere-the-picky-virgin": {
     title: "Tari-Ere: The Picky Virgin",
@@ -140,9 +140,11 @@ const Book = () => {
                 ORDER NOW
               </button>
             </div>
-            {/* Main Order Modal */}
             {showPopup && (
-              <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+              <div
+                className="fixed inset-0 z-[1000] flex items-center justify-center px-4 overflow-hidden"
+                style={{ position: "fixed", overflow: "hidden" }}
+              >
                 <div className="rounded-lg p-6 w-full text-center">
                   <div className="flex justify-end mb-10">
                     <X
@@ -162,9 +164,12 @@ const Book = () => {
                     </button>
                     <button
                       className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[110px]"
-                      onClick={() => setShowPopup(false)}
+                      onClick={() => {
+                        setShowPopup(false);
+                        setShowComingSoon(true);
+                      }}
                     >
-                      Hive
+                      Selar
                     </button>
                   </div>
                 </div>
