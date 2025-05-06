@@ -11,7 +11,7 @@ function Contact() {
           Join my Readers' Club
         </h2>
         <p className="text-base md:text-lg leading-8 mb-6">
-          Join my Readers Club to receive a FREE short story, plus news of
+          Join my Readers Club to receive a FREE short stories, plus news of
           giveaways, book recommendations, writing tips and more.
         </p>
         <form className="space-y-4">
@@ -43,21 +43,21 @@ function Contact() {
           <p>Do get in touch.</p>
           <p>
             Write to me at{" "}
-            <Link href="mailto: hello@linda-x.com" className="text-[#a72024] hover:underline">
+            <Link to="mailto: hello@linda-x.com" className="text-[#a72024] hover:underline">
               hello@linda-x.com
             </Link>{" "}
             or contact me on social media below.
           </p>
           <p>
             For events and publicity contact me directly:{" "}
-            <Link href="mailto:booklinda@linda-x.com" className="text-[#a72024] hover:underline">
+            <Link to="mailto:booklinda@linda-x.com" className="text-[#a72024] hover:underline">
               booklinda@linda-x.com.
             </Link>
           </p>
           <p className="text-center font-semibold">Say hello on social media</p>
           <div className="flex justify-center gap-4 text-2xl">
             <Link
-              href="https://www.facebook.com/share/16H5Kn7dHk/"
+              to="https://www.facebook.com/share/16H5Kn7dHk/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#a72024] p-2 rounded-full"
@@ -65,7 +65,7 @@ function Contact() {
               <FaFacebookF className="cursor-pointer" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/linda-somiari-stewart-858556150?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              to="https://www.linkedin.com/in/linda-somiari-stewart-858556150?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#a72024] p-2 rounded-full"
@@ -73,7 +73,7 @@ function Contact() {
               <FaLinkedinIn className="cursor-pointer" />
             </Link>
             <Link
-              href="https://www.instagram.com/lindasomiari?igsh=MWw1YjRnanBteDMybw=="
+              to="https://www.instagram.com/lindasomiari?igsh=MWw1YjRnanBteDMybw=="
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#a72024] p-2 rounded-full"

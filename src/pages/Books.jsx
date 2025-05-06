@@ -52,6 +52,7 @@ const bookDetails = {
     picture: Img3,
     scribe: "Praise for Woyingi: God is a Woman",
     link: "https://docs.google.com/document/d/1w-e5com2ytLpSq62yGDoJmZLm9GgOrpZqqaMFu1doZg/edit?usp=sharing",
+    selar: "https://selar.com/4r5695",
   },
   "tari-ere-the-picky-virgin": {
     title: "Tari-Ere: The Picky Virgin",
@@ -93,6 +94,7 @@ const bookDetails = {
     scribe: "Praise for Tari-Ere: The Picky Virgin",
     picture: Img4,
     link: "https://docs.google.com/document/d/1FM2U1JiqMEdgFQtdNB2umZHgOKp34UKVPPiBinDfIGU/edit?usp=sharing",
+    selar: "https://selar.com/14u2v1",
   },
 };
 
@@ -154,23 +156,28 @@ const Book = () => {
                   </div>
                   <div className="flex justify-around bg-[#262626] py-7 mb-4">
                     <button
-                      className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[110px]"
+                      className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[150px]"
                       onClick={() => {
                         setShowPopup(false);
                         setShowComingSoon(true);
                       }}
                     >
-                      Amazon
+                      Amazon (UK)
                     </button>
                     <button
-                      className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[110px]"
+                      className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[150px]"
                       onClick={() => {
                         setShowPopup(false);
                         setShowComingSoon(true);
                       }}
                     >
-                      Selar
+                      Amazon (Int'l)
                     </button>
+                    <Link to={book.selar}>
+                      <button className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[150px]">
+                        Selar
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

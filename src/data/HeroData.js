@@ -7,7 +7,7 @@ import Img2Extra from "../assets/bird-and-shroom.webp";
 export const heroSections = [
   {
     id: "woyingi-god-is-a-woman",
-    title: "The first book in Linda’s captivating spiritual series, Woyingi: God is a Woman, is out now!",
+    title: "The first book in Linda’s captivating folktale series, Woyingi: God is a Woman, is out now!",
     description:
       "“A thought-provoking exploration of the Divine, weaving together history, spirituality, and culture. A powerful narrative that challenges perceptions and celebrates the sacred feminine.”",
     link: "/book/woyingi-god-is-a-woman",
