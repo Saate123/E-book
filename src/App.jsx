@@ -2,7 +2,6 @@
 import { useState } from "react";
 import "./App.css";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import ComingSoon from "./pages/ComingSoon";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ContactMe from "./pages/ContactMe";
@@ -17,8 +16,7 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<ComingSoon />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactMe />} />
         <Route path="/events" element={<NewsEvents />} />
