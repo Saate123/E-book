@@ -23,7 +23,7 @@ const AnimatedTitle = () => {
   return (
     <div className="relative z-10 max-w-7xl w-full text-center text-white">
       <motion.h1
-        className="lg:text-3xl text-2xl font-bold flex justify-center flex-wrap"
+        className="lg:text-3xl text-[20px] font-bold flex justify-center flex-wrap"
         variants={container}
         initial="hidden"
         animate="show"
