@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Img from "../assets/FB_IMG_1743869048255.jpg";
 import BackgroundImg from "../assets/background3.jpg";
+import emailjs from "@emailjs/browser";
 
 function Newsletter() {
+  const form = useRef();
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+  
+    const sendEmail = (e) => {
+      e.preventDefault();
+      setIsLoading(true);
+  
+      emailjs
+        .sendForm(
+          "service_27fbrvj",
+          "template_amzz8ak",
+          form.current,
+          "bYP_o4Ly5gn1Uy9zu"
+        )
+        .then(
+          () => {
+            setIsLoading(false);
+            setIsSubmitted(true);
+          },
+          (error) => {
+            setIsLoading(false);
+            alert("Failed to send message. Please try again.");
+            console.error(error);
+          }
+        );
+  };
+
   return (
     <div
       className="relative w-full min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center px-6 sm:px-12"
@@ -25,19 +54,39 @@ function Newsletter() {
             Join my Readers' Club to receive a FREE short stories, plus news of
             giveaways, book recommendations, writing tips and more.
           </p>
-          <form>
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full h-12 bg-[#1a1a1a] mb-5 pl-5 rounded-sm"
-            />
-            <input
-              type="text"
-              placeholder="Email"
-              className="w-full h-12 bg-[#1a1a1a] mb-5 pl-5 rounded-sm"
-            />
-            <button className="w-full text-center bg-[#D7FF00] h-12 text-lg text-black rounded-sm">Join</button>
-          </form>
+          {isSubmitted ? (
+            <div className="bg-[#202020] p-6 rounded-md text-center shadow-md">
+              <p className="text-lg text-white">
+                Thanks for joining me!.Look out for the email asking you to
+                confirm your address.
+              </p>
+            </div>
+          ) : (
+            <form className="space-y-4" ref={form} onSubmit={sendEmail}>
+              <input
+                type="text"
+                placeholder="Name"
+                name="first-name"
+                className="w-full h-12 bg-[#323131] pl-5 rounded-sm"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                className="w-full h-12 bg-[#323131] pl-5 rounded-sm"
+              />
+              <button
+                type="submit"
+                className="w-full text-center text-white bg-[#a72024] h-12 text-lg"
+              >
+                {isLoading ? (
+                  <span className="animate-pulse tracking-widest">...</span>
+                ) : (
+                  "Join"
+                )}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </div>

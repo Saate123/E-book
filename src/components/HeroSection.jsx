@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AnimatedTitle from "./AnimatedTitle";
 
 function HeroSection({ section }) {
   const { id, title, description, link, image, background, color, extraImg } =
@@ -7,11 +8,15 @@ function HeroSection({ section }) {
 
   return (
     <div
-      className="relative w-full min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center py-10 px-6 sm:px-12"
+      className="relative w-full min-h-[90vh] bg-cover bg-center bg-no-repeat flex flex-wrap items-center justify-center py-10 px-6 sm:px-12"
       id={id}
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
+
+      <div className="relative z-10 max-w-7xl w-full text-center text-white">
+        <AnimatedTitle/>
+      </div>
 
       <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 text-white py-20 px-10">
         {/* Text Content */}

@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import BackgroundImg from "../assets/about-bg.jpg";
 import Img from "../assets/FB_IMG_1743869068178.jpg";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import Header from "../components/Headers";
 import Footer from "../components/Footer";
+import emailjs from "@emailjs/browser";
 
 function ContactMe() {
+  const form = useRef();
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_27fbrvj",
+        "template_amzz8ak",
+        form.current,
+        "bYP_o4Ly5gn1Uy9zu"
+      )
+      .then(
+        () => {
+          setIsLoading(false);
+          setIsSubmitted(true);
+        },
+        (error) => {
+          setIsLoading(false);
+          alert("Failed to send message. Please try again.");
+          console.error(error);
+        }
+      );
+  };
+
   return (
     <div>
       <Header />
@@ -123,30 +152,59 @@ function ContactMe() {
           </section>
 
           {/* Section 2: Reader's Club */}
-          <section className=" text-white max-w-4xl mx-auto py-10">
-            <h2 className="text-3xl w-full sm:text-4xl md:text-5xl p-3 mb-10 bg-[#A72024] inline-block">
+          <section className="text-white max-w-4xl mx-auto py-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl p-3 mb-10 bg-[#A72024] inline-block">
               Join My Reader’s Club
             </h2>
-            <form className="space-y-4 bg-[#323131] p-6 ">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="w-full h-12 bg-white text-black pl-4 rounded-sm"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="w-full h-12 bg-white text-black pl-4 rounded-sm"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full h-12 bg-white text-black pl-4 rounded-sm"
-              />
-              <button className="w-full h-12 bg-[#a72024] hover:bg-[#87191d] text-white text-lg rounded-sm transition">
-                Join
-              </button>
-            </form>
+
+            {isSubmitted ? (
+              <div className="bg-[#202020] p-6 rounded-md text-center shadow-md">
+                <h3 className="text-2xl mb-4 text-[#A72024] font-semibold">
+                  Thanks for joining me!
+                </h3>
+                <p className="text-lg text-white">
+                  Look out for the email asking you to confirm your address.
+                </p>
+              </div>
+            ) : (
+              <form
+                className="space-y-4 bg-[#323131] p-6"
+                ref={form}
+                onSubmit={sendEmail}
+              >
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  name="first-name"
+                  className="w-full h-12 bg-white text-black pl-4 rounded-sm"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  name="last-name"
+                  className="w-full h-12 bg-white text-black pl-4 rounded-sm"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  className="w-full h-12 bg-white text-black pl-4 rounded-sm"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="w-full h-12 bg-[#a72024] hover:bg-[#87191d] text-white text-lg rounded-sm transition flex items-center justify-center"
+                >
+                  {isLoading ? (
+                    <span className="animate-pulse tracking-widest">...</span>
+                  ) : (
+                    "Join Me"
+                  )}
+                </button>
+              </form>
+            )}
           </section>
         </div>
       </div>

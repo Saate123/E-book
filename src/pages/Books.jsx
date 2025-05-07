@@ -133,7 +133,6 @@ const Book = () => {
               <p>{book.description}</p>
             </div>
 
-            {/* Button aligned to the right */}
             <div className="hidden md:flex mt-6 justify-end">
               <button
                 onClick={() => setShowPopup(true)}
@@ -149,14 +148,14 @@ const Book = () => {
               >
                 <div className="rounded-lg p-6 w-full text-center">
                   <div className="flex justify-end mb-10">
-                    <X
+                    <X size={40}
                       className="text-2xl text-white"
                       onClick={() => setShowPopup(false)}
                     />
                   </div>
-                  <div className="flex justify-around bg-[#262626] py-7 mb-4">
+                  <div className="grid gap-4 bg-[#262626] py-7 mb-4 lg:grid-cols-3">
                     <button
-                      className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[150px]"
+                      className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[200px] lg:w-[150px] mx-auto"
                       onClick={() => {
                         setShowPopup(false);
                         setShowComingSoon(true);
@@ -165,7 +164,7 @@ const Book = () => {
                       Amazon (UK)
                     </button>
                     <button
-                      className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[150px]"
+                      className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[200px] lg:w-[150px] mx-auto"
                       onClick={() => {
                         setShowPopup(false);
                         setShowComingSoon(true);
@@ -174,7 +173,7 @@ const Book = () => {
                       Amazon (Int'l)
                     </button>
                     <Link to={book.selar}>
-                      <button className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[150px]">
+                      <button className="bg-[#eb2e34] text-white  px-4 py-2 rounded w-[200px] lg:w-[150px] mx-auto">
                         Selar
                       </button>
                     </Link>
@@ -226,7 +225,7 @@ const Book = () => {
       <section className=" w-full flex flex-col bg-[#080808] lg:flex-row items-center gap-2 px-4 py-10">
         {/* Image with background box */}
         <div className="flex justify-center w-full lg:w-1/3">
-          <div className="bg-[#262626] p-4 rounded-md shadow-lg">
+          <div className="bg-[#262626] p-4 rounded-md shadow-lg border-2 border-[#f9f9f9]">
             <Link to={book.link}>
               <img
                 src={book.image}
