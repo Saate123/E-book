@@ -57,7 +57,7 @@ function Newsletter() {
           {isSubmitted ? (
             <div className="bg-[#202020] p-6 rounded-md text-center shadow-md">
               <p className="text-lg text-white">
-                Thanks for joining me!.Look out for the email asking you to
+                Thanks for joining me! Look out for the email asking you to
                 confirm your address.
               </p>
             </div>
