@@ -21,7 +21,7 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm uppercase font-medium">
-          <NavLink to="/home" className={navClass}>
+          <NavLink to="/" className={navClass}>
             Home
           </NavLink>
 
