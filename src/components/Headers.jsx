@@ -90,7 +90,7 @@ const Header = () => {
           <div className="w-[300px] bg-black border-t-4 border-[#CCFF00] px-6 py-6 text-sm uppercase font-medium animate-slide-down">
             <div className="flex flex-col space-y-4 text-left text-white">
               <NavLink
-                to="/home"
+                to="/"
                 className={navClass}
                 onClick={() => setMenuOpen(false)}
               >
