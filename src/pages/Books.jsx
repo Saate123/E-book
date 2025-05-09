@@ -36,17 +36,21 @@ const bookDetails = {
     image: Img,
     para: (
       <>
-        The Book of Secrets is a gripping historical thriller where the reader’s
-        dilemma is that we are rooting for both sides, the investigator and the
-        women he is hunting. It is a hugely entertaining read but also an
-        important one in an era when women’s rights are being called into
-        question. Magnificent.’ LIZ NUGENT <br /> ‘An exceptional novel, which
-        immerses you in the mysterious, gothic world of seventeenth century
-        Italy, yet also remains deeply relevant for our times. I was completely
-        gripped right up to its devastating conclusion which is both profoundly
-        affecting and masterfully drawn. Moving, compelling, and a stunning
-        evocation of Baroque Rome, this is Anna Mazzola’s finest work yet’.
-        ELODIE HARPER
+        <p>
+          “Woyingi is a powerful reawakening. Linda has masterfully brought to
+          light a sacred truth that has long been buried—the divine feminine.
+          It’s deeply spiritual, intellectually engaging, and emotionally
+          healing.”
+          <br /> <span>Dr. Amaka O.</span>
+        </p>
+        <p>
+          {" "}
+          “This book gave me chills in the best way. Woyingi invites you to
+          question, reflect, and reconnect with your spiritual roots. It’s not
+          just a book—it’s an awakening wrapped in story.”
+          <br />
+          <>Ebiye D.</>
+        </p>
       </>
     ),
     bg: backgroundImage,
@@ -61,32 +65,35 @@ const bookDetails = {
       <>
         Tale of love, self-discovery, and the wisdom of parental guidance,
         passed down through generations in the Ijaw communities of Nigeria’s
-        Niger Delta.<br/> The story follows Tari-Ere, a young virgin who rejects
-        countless human suitors, believing none are worthy of her. Fate takes an
-        unexpected turn when she falls in love with a non-human. <br/> Through her
-        meekness and resourcefulness, she earns the favor of her formidable
-        mother in-law who eventually helps her return to land.<br /> Having learned
-        the value of humility , obedience and an open heart, Tari-Ere heeds her
-        parents’ guidance and ultimately marries the most eligible bachelor in
-        her village. This cherished legend serves as a timeless lesson for young
-        people, reminding them to value their parents’ wisdom and approach love
-        with both discernment and an open mind
+        Niger Delta.
+        <br /> The story follows Tari-Ere, a young virgin who rejects countless
+        human suitors, believing none are worthy of her. Fate takes an
+        unexpected turn when she falls in love with a non-human. <br /> Through
+        her meekness and resourcefulness, she earns the favor of her formidable
+        mother in-law who eventually helps her return to land.
+        <br /> Having learned the value of humility , obedience and an open
+        heart, Tari-Ere heeds her parents’ guidance and ultimately marries the
+        most eligible bachelor in her village. This cherished legend serves as a
+        timeless lesson for young people, reminding them to value their parents’
+        wisdom and approach love with both discernment and an open mind
       </>
     ),
     image: Img2,
     para: (
       <>
-        The Book of Secrets is a gripping historical thriller where the reader’s
-        dilemma is that we are rooting for both sides, the investigator and the
-        women he is hunting. It is a hugely entertaining read but also an
-        important one in an era when women’s rights are being called into
-        question. Magnificent.’ LIZ NUGENT <br /> ‘An exceptional novel, which
-        immerses you in the mysterious, gothic world of seventeenth century
-        Italy, yet also remains deeply relevant for our times. I was completely
-        gripped right up to its devastating conclusion which is both profoundly
-        affecting and masterfully drawn. Moving, compelling, and a stunning
-        evocation of Baroque Rome, this is Anna Mazzola’s finest work yet’.
-        ELODIE HARPER
+        <p>
+          “Tari-Ere is a stunning blend of folklore and life lessons. It’s
+          beautifully written, rich in culture, and full of heart. I laughed, I
+          held my breath, and I learned.”
+          <br /> <>Koko Briggs</>
+        </p>
+        <p>
+          “An enchanting story that reminds us how powerful the wisdom of our
+          ancestors can be. I loved how Linda wove magic, tradition, and emotion
+          into every chapter.”
+          <br />
+          <>Tamara Owei</>
+        </p>
       </>
     ),
     bg: backgroundImage2,
@@ -271,7 +278,7 @@ const Book = () => {
 
           {/* Centered Paragraph */}
           <div className="flex justify-center items-center w-full">
-            <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed text-center max-w-3xl">
+            <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed text-center max-w-3xl p-1.5">
               {book.para}
             </p>
           </div>
