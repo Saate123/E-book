@@ -29,7 +29,7 @@ function AboutUs() {
           </h3>
           <div className="space-y-4 text-base sm:text-lg leading-relaxed">
             <p>
-              Linda Somiari-Stewart is a Nigerian journalist-turned-griot with a
+              Linda Somiari-Stewart (Linda X) is a Nigerian journalist-turned-griot with a
               passion for preserving Africa’s rich storytelling traditions. With
               an extensive background in both print and television media, she
               has dedicated her life to reviving the fading art of African oral

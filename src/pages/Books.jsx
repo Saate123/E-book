@@ -16,20 +16,21 @@ const bookDetails = {
     title: "Woyingi: God is a Woman",
     description: (
       <>
-        ‘Casts its own powerful brand of dark magic’ – The Mirror A dark tale of
-        folklore and disappearances on the Isle of Skye. Audrey Hart travels to
-        Skye and to the mansion of a reclusive folklorist to collect the folk
-        and fairy tales of the local people.
-        <br /> It is 1857, the Highland Clearances have left devastation and
-        poverty, and the crofters are suspicious and hostile, claiming they no
-        longer know their stories. Then Audrey discovers the body of a young
-        girl washed up in the bay beneath Lanerly, and the crofters reveal that
-        it is only a matter of weeks since another girl disappeared.
-        <br /> They believe the girls are victims of the restless dead: spirits
-        who take the form of birds. At first, Audrey suspects that the girls are
-        being abducted, but as events accumulate she begins to wonder if
-        something else is at work. Something which may be linked to the death of
-        her own mother, many years before.
+        The Ijaw story of a female creatress explores the mystical and
+        water-soaked landscapes of the Niger Delta—a place where the waters
+        themselves are keepers of ancient lore.
+        <br /> Here, creeks and mangroves weave a tapestry as old as time, and
+        the night comes alive under the twinkling lights of fishermen's lamps
+        and the rhythmic serenade of the tides. It is here, amidst the hushed
+        whispers of the night, that elders gather to pass down the cherished
+        tales of the coastal dwellers.
+        <br /> This narrative, deeply rooted in the essence of the creative
+        force and whispered by the winds, travels on the currents carried by
+        canoe paddles and shared from one generation to the next. It is a rich
+        tapestry of divine beings and a mortal's struggles, of cunning
+        tricksters and valiant warriors, and spirits that roam amongst the
+        living. Like the vast ocean, this story embodies both tranquility and
+        tumult, always alive, forever resonant.
       </>
     ),
     image: Img,
@@ -58,20 +59,18 @@ const bookDetails = {
     title: "Tari-Ere: The Picky Virgin",
     description: (
       <>
-        ‘Casts its own powerful brand of dark magic’ – The Mirror A dark tale of
-        folklore and disappearances on the Isle of Skye. Audrey Hart travels to
-        Skye and to the mansion of a reclusive folklorist to collect the folk
-        and fairy tales of the local people. <br />
-        It is 1857, the Highland Clearances have left devastation and poverty,
-        and the crofters are suspicious and hostile, claiming they no longer
-        know their stories. Then Audrey discovers the body of a young girl
-        washed up in the bay beneath Lanerly, and the crofters reveal that it is
-        only a matter of weeks since another girl disappeared.
-        <br /> They believe the girls are victims of the restless dead: spirits
-        who take the form of birds. At first, Audrey suspects that the girls are
-        being abducted, but as events accumulate she begins to wonder if
-        something else is at work. Something which may be linked to the death of
-        her own mother, many years before.
+        Tale of love, self-discovery, and the wisdom of parental guidance,
+        passed down through generations in the Ijaw communities of Nigeria’s
+        Niger Delta.<br/> The story follows Tari-Ere, a young virgin who rejects
+        countless human suitors, believing none are worthy of her. Fate takes an
+        unexpected turn when she falls in love with a non-human. <br/> Through her
+        meekness and resourcefulness, she earns the favor of her formidable
+        mother in-law who eventually helps her return to land.<br /> Having learned
+        the value of humility , obedience and an open heart, Tari-Ere heeds her
+        parents’ guidance and ultimately marries the most eligible bachelor in
+        her village. This cherished legend serves as a timeless lesson for young
+        people, reminding them to value their parents’ wisdom and approach love
+        with both discernment and an open mind
       </>
     ),
     image: Img2,
