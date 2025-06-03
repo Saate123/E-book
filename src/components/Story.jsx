@@ -300,7 +300,7 @@ function StoryPopup() {
       <div className="w-full max-w-2xl bg-white rounded-lg shadow-2xl p-6 mt-8 mb-8 animate-fade-in relative">
         {/* Back button in top-left */}
         <Link to="/">
-          <button className="absolute bottom-0 right-0 lg:-left-26 text-white hover:text-blue-700 font-semibold flex items-center gap-1 p-3 bg-[#E02B20] ">
+          <button className="absolute bottom-0 right-0 lg:-left-26 text-white w-[100px] hover:text-blue-700 font-semibold flex items-center gap-1 p-3 bg-[#E02B20] ">
             <svg
               width="24"
               height="24"
