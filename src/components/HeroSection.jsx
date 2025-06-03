@@ -14,9 +14,12 @@ function HeroSection({ section }) {
     >
       <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
 
-      <div className="relative z-10 max-w-7xl w-full text-center text-white">
-        <AnimatedTitle/>
-      </div>
+      {/* Show AnimatedTitle only for the first HeroSection (id === 'hero' or your chosen id) */}
+      {id === "woyingi-god-is-a-woman" && (
+        <div className="relative z-10 max-w-7xl w-full text-center text-white">
+          <AnimatedTitle />
+        </div>
+      )}
 
       <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 text-white py-20 px-10">
         {/* Text Content */}

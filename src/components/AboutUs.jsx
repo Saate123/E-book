@@ -5,7 +5,7 @@ import Img from "../assets/FB_IMG_1743869048255.jpg";
 function AboutUs() {
   return (
     <div
-      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center px-4"
+      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-center px-4"
       style={{ backgroundImage: `url(${BackgroundImg})` }}
     >
       {/* Overlay */}
@@ -23,40 +23,50 @@ function AboutUs() {
         </div>
 
         {/* Text Section */}
-        <div className="bg-[#2E2E2E] bg-opacity-90 p-6 shadow-lg rounded-sm">
-          <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 bg-[#A72024] p-3">
-            About Linda
+        <div className="bg-[#2E2E2E] bg-opacity-90 p-6 shadow-lg rounded-sm lg:w-[600px]">
+          <h3 className="text-2xl sm:text-2xl md:text-3xl font-semibold mb-6 bg-[#A72024] p-3">
+            About Linda Somiari-Stewart
           </h3>
           <div className="space-y-4 text-base sm:text-lg leading-relaxed">
+            <bold className="mb-[10px]">
+              Journalist. Griot. Keeper of Ancestral Fire.
+            </bold>
             <p>
-              Linda Somiari-Stewart (Linda X) is a Nigerian journalist-turned-griot with a
-              passion for preserving Africa’s rich storytelling traditions. With
-              an extensive background in both print and television media, she
-              has dedicated her life to reviving the fading art of African oral
-              narratives through the written word. Her works, including{" "}
-              <em>
-                Woyingi: God Is a Woman and The Legend of Tari-Ere: The Picky
-                Virgin,
-              </em>
-              celebrate African folklore while challenging conventional ideas
-              about spirituality, gender, and identity.
+              Linda Somiari-Stewart is a journalist-turned-griot with a passion
+              for preserving Africa’s rich storytelling traditions. With an
+              extensive background in both print and television media, she has
+              dedicated her life to reviving the fading art of African oral
+              narratives through the written word.
             </p>
             <p>
-              Drawing deeply from her Ijaw heritage, Somiari-Stewart’s
-              storytelling is both personal and universal, weaving myth,
-              history, and philosophy into rich, lyrical narratives. Her
-              exploration of the divine feminine and her commitment to cultural
-              authenticity position her as a powerful voice in contemporary
-              African literature.
+              Her acclaimed works—including Woyingi: God Is a Woman , The Legend
+              of Tari-Ere: The Picky Virgin and The Square of Lost Songs-A
+              Modern Griot Tales -celebrate African folklore while boldly
+              exploring themes of gender, identity, the divine feminine and the
+              supernatural. Drawing deeply from her African heritage, her
+              storytelling weaves myth, memory, and philosophy into rich,
+              lyrical narratives that speak to both the personal and the
+              universal.
             </p>
             <p>
-              Through her writing, Linda Somiari-Stewart invites readers to
-              reconnect with ancestral wisdom, rethink entrenched narratives,
-              and discover the timeless relevance of African myths in today’s
-              world. She continues to work on new projects that aim to keep the
-              spirit of African storytelling alive for future generations.
+              Today, she is sought after by the young and old across Africa and
+              the diaspora. In quiet one-on-one sessions or small group circles,
+              people turn to her when life feels heavy, when the path forward is
+              unclear, or when something deep within longs to be understood.
+              With ancestral wisdom and deep listening, she offers more than
+              answers—she offers clarity, healing, and direction.
             </p>
-            <p>She is a widow, mother and grandmother.</p>
+            <p>
+              Many leave her presence transformed—grounded, renewed, and ready
+              to live more purposeful lives. Her impact echoes through stories,
+              referrals, and lives changed by words both ancient and alive.
+            </p>
+            <p>
+              “She doesn’t just tell stories. She helps you find your own.”
+              <br />
+              Linda Somiari- Stewart is a living proof that wisdom deepens with time and that the griot’s flame burns strong for the
+              generations to come.
+            </p>
           </div>
         </div>
       </div>

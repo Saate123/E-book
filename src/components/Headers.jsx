@@ -43,7 +43,7 @@ const Header = () => {
                     to="/book/woyingi-god-is-a-woman"
                     className={navClass}
                   >
-                    Woyingi: God is a Woman
+                    Tamara: The Gender of God
                   </NavLink>
                 </li>
                 <li>
@@ -51,7 +51,15 @@ const Header = () => {
                     to="/book/tari-ere-the-picky-virgin"
                     className={navClass}
                   >
-                    Tari-Ere: The Picky Virgin
+                    She Who Loved A Lie
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/book/the-square-of-lost-sons"
+                    className={navClass}
+                  >
+                    The Square Of Lost Sons
                   </NavLink>
                 </li>
               </ul>

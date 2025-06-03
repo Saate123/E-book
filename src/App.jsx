@@ -8,15 +8,30 @@ import ContactMe from "./pages/ContactMe";
 import Articles from "./pages/Articles";
 import NewsEvents from "./pages/NewsEvents";
 import Book from "./pages/Books";
+import StoryPopup from "./components/Story";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 
 function App() {
-  const [count, setCount] = useState(0);
+  // Scroll to top on route change
+
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  }
 
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/story/:storyKey" element={<StoryPopup />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactMe />} />
         <Route path="/events" element={<NewsEvents />} />

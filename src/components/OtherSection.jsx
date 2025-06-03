@@ -1,6 +1,12 @@
 import React from "react";
 import Img from "../assets/WOYINGI.jpeg.jpg";
 import Img2 from "../assets/TARI.jpeg.jpg";
+import { Link } from "react-router-dom";
+
+const link ={
+  WOYINGI: "https://selar.com/4r5695",
+  TARI: "https://selar.com/14u2v1"
+}
 
 function OtherSection() {
   return (
@@ -14,13 +20,13 @@ function OtherSection() {
             key={index}
             className="w-full max-w-[180px] hover:scale-105 transition-transform duration-300"
           >
-            <a href="#">
+            <Link to={index === 0 ? link.WOYINGI : link.TARI}>
               <img
                 src={image}
                 alt={`Anna's book ${index + 1}`}
                 className="w-full h-auto shadow-lg rounded-md"
               />
-            </a>
+            </Link>
           </div>
         ))}
       </div>

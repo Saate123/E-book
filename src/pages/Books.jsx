@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Img from "../assets/WOYINGI.jpeg.jpg";
-import Img2 from "../assets/TARI.jpeg.jpg";
+import Img from "../assets/Tamara.jpg";
+import Img2 from "../assets/tariere.jpg";
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/Headers";
 import Newsletter from "../components/Newsletter";
@@ -8,106 +8,120 @@ import Footer from "../components/Footer";
 import backgroundImage from "../assets/background.jpg";
 import backgroundImage2 from "../assets/background2.webp";
 import Img3 from "../assets/Piano.webp";
+import Img5 from "../assets/The Square of Lost Songs.jpg";
 import Img4 from "../assets/praise-bits-2.webp";
 import { X } from "lucide-react"; // Importing the X icon from react-feather
 
 const bookDetails = {
   "woyingi-god-is-a-woman": {
-    title: "Woyingi: God is a Woman",
-    description: (
-      <>
-        The Ijaw story of a female creatress explores the mystical and
-        water-soaked landscapes of the Niger Delta—a place where the waters
-        themselves are keepers of ancient lore.
-        <br /> Here, creeks and mangroves weave a tapestry as old as time, and
-        the night comes alive under the twinkling lights of fishermen's lamps
-        and the rhythmic serenade of the tides. It is here, amidst the hushed
-        whispers of the night, that elders gather to pass down the cherished
-        tales of the coastal dwellers.
-        <br /> This narrative, deeply rooted in the essence of the creative
-        force and whispered by the winds, travels on the currents carried by
-        canoe paddles and shared from one generation to the next. It is a rich
-        tapestry of divine beings and a mortal's struggles, of cunning
-        tricksters and valiant warriors, and spirits that roam amongst the
-        living. Like the vast ocean, this story embodies both tranquility and
-        tumult, always alive, forever resonant.
-      </>
-    ),
+    title: "Tamara: The Gender of God",
+    description: [
+      "Long before we saw ourselves here, Tamara ruled the multiverse. But history remembers only what power permits. This is the Ijaw mythology of the one the world unmade, the name they silenced, the gender they rewrote.",
+      "A bold retelling rooted in ancestral memory and mythic resistance, Tamara: The Gender of God reclaims the forgotten feminine at the heart of creation and dares to ask: What if God is She?",
+    ],
     image: Img,
     para: (
-      <>
-        <p>
-          “Woyingi is a powerful reawakening. Linda has masterfully brought to
-          light a sacred truth that has long been buried—the divine feminine.
-          It’s deeply spiritual, intellectually engaging, and emotionally
-          healing.”
-          <br /> <span>Dr. Amaka O.</span>
-        </p>
-        <p>
-          {" "}
-          “This book gave me chills in the best way. Woyingi invites you to
-          question, reflect, and reconnect with your spiritual roots. It’s not
-          just a book—it’s an awakening wrapped in story.”
-          <br />
-          <>Ebiye D.</>
-        </p>
-      </>
+      <dl>
+        <div>
+          <dd>
+            “Tamara is a powerful reawakening. Linda has masterfully brought to
+            light a sacred truth that has long been buried—the divine feminine.
+            It’s deeply spiritual, intellectually engaging, and emotionally
+            healing.”
+          </dd>
+          <dt className="font-semibold">Dr. Amaka O.</dt>
+        </div>
+        <div>
+          <dd>
+            “This book gave me chills in the best way. Tamara invites you to
+            question, reflect, and reconnect with your spiritual roots. It’s not
+            just a book—it’s an awakening wrapped in story.”
+          </dd>
+          <dt className="font-semibold">Ebiye D.</dt>
+        </div>
+      </dl>
     ),
     bg: backgroundImage,
     picture: Img3,
-    scribe: "Praise for Woyingi: God is a Woman",
+    scribe: "Praise for Tamara: The Gender of God",
     link: "https://docs.google.com/document/d/1w-e5com2ytLpSq62yGDoJmZLm9GgOrpZqqaMFu1doZg/edit?usp=sharing",
-    selar: "https://selar.com/4r5695",
   },
   "tari-ere-the-picky-virgin": {
-    title: "Tari-Ere: The Picky Virgin",
-    description: (
-      <>
-        Tale of love, self-discovery, and the wisdom of parental guidance,
-        passed down through generations in the Ijaw communities of Nigeria’s
-        Niger Delta.
-        <br /> The story follows Tari-Ere, a young virgin who rejects countless
-        human suitors, believing none are worthy of her. Fate takes an
-        unexpected turn when she falls in love with a non-human. <br /> Through
-        her meekness and resourcefulness, she earns the favor of her formidable
-        mother in-law who eventually helps her return to land.
-        <br /> Having learned the value of humility , obedience and an open
-        heart, Tari-Ere heeds her parents’ guidance and ultimately marries the
-        most eligible bachelor in her village. This cherished legend serves as a
-        timeless lesson for young people, reminding them to value their parents’
-        wisdom and approach love with both discernment and an open mind
-      </>
-    ),
+    title: "She Who Loved A Lie",
+    description: [
+      "An Ijaw Folktale About Love, Loss and Return. She Who Loved a Lie: An Ijaw folktale of love, loss, and return",
+      "Tari-Ere was a proud virgin-beautiful, bold, and unimpressed by the many suitors who sought her hand. But when a mysterious stranger arrived, speaking sweet words and cloaked in charm, her guarded heart gave way.",
+      "She had no idea she was marrying a water god in disguise.",
+      "Swept into the oceanic realm, Tari-Ere wept as she discovered the truth. Trapped between worlds, stripped of all she knew, she found the strength to endure and by a twist of fate, was returned to her people.",
+      "Now wiser and humbled, Tari-Ere listens to the wisdom of her parents and opens her heart anew. This time, she chooses with clarity.",
+      "She Who Loved a Lie is a timeless tale from the Niger Delta reminding young hearts that not all that glitters is true love, and that sometimes the path to joy begins with a painful awakening.",
+    ],
     image: Img2,
     para: (
-      <>
-        <p>
-          “Tari-Ere is a stunning blend of folklore and life lessons. It’s
-          beautifully written, rich in culture, and full of heart. I laughed, I
-          held my breath, and I learned.”
-          <br /> <>Koko Briggs</>
-        </p>
-        <p>
-          “An enchanting story that reminds us how powerful the wisdom of our
-          ancestors can be. I loved how Linda wove magic, tradition, and emotion
-          into every chapter.”
-          <br />
-          <>Tamara Owei</>
-        </p>
-      </>
+      <dl>
+        <div>
+          <dd>
+            “She who loved a lie is a stunning blend of folklore and life
+            lessons. It’s beautifully written, rich in culture, and full of
+            heart. I laughed, I held my breath, and I learned.”
+          </dd>
+          <dt className="font-semibold">Koko Briggs</dt>
+        </div>
+        <div>
+          <dd>
+            “An enchanting story that reminds us how powerful the wisdom of our
+            ancestors can be. I loved how Linda wove magic, tradition, and
+            emotion into every chapter.”
+          </dd>
+          <dt className="font-semibold">Tamara Owei</dt>
+        </div>
+      </dl>
     ),
     bg: backgroundImage2,
     scribe: "Praise for Tari-Ere: The Picky Virgin",
     picture: Img4,
     link: "https://docs.google.com/document/d/1FM2U1JiqMEdgFQtdNB2umZHgOKp34UKVPPiBinDfIGU/edit?usp=sharing",
-    selar: "https://selar.com/14u2v1",
+  },
+  "the-square-of-lost-sons": {
+    title: "The Square of Lost Sons: A Modern Griot Tales",
+    description: [
+      "In a world that traded wisdom for wireless, and firelight for false light, the griot returns…",
+      "The Square of Lost Sons is a soul-stirring collection of modern folktales that echo with the wisdom of ancient drums and the defiance of forgotten tongues. From wind-shamed princes and dancing daughters who could not stop, to eagles who dreamed beyond the clouds and spiders repaying old debts, Linda Somiari-Stewart revives the griot’s sacred calling: to remember, to rebuke, to restore.",
+      "Each tale is a fire lit against forgetfulness, a song for the children of the diaspora and dreamers who long for rootedness. Here, ancestral spirits speak not from graves but from the spaces we once abandoned— courtyards, firesides, names, and truths.",
+      "If you have ever longed to sit at the feet of elders or wondered what the wind forgot to tell you, this book will bring you home.",
+    ],
+    image: Img5,
+    para: (
+      <dl>
+        <div>
+          <dd>
+            “The square of lost songs is a powerful reawakening. Linda has
+            masterfully brought to light a sacred truth that has long been
+            buried—the divine feminine. It’s deeply spiritual, intellectually
+            engaging, and emotionally healing.”
+          </dd>
+          <dt className="font-semibold">Dr. Amaka O.</dt>
+        </div>
+        <div>
+          <dd>
+            “This book gave me chills in the best way. Tamara invites you to
+            question, reflect, and reconnect with your spiritual roots. It’s not
+            just a book—it’s an awakening wrapped in story.”
+          </dd>
+          <dt className="font-semibold">Ebiye D.</dt>
+        </div>
+      </dl>
+    ),
+    bg: backgroundImage,
+    picture: Img3,
+    scribe: "Praise for Tamara: The Gender of God",
+    link: "",
   },
 };
 
 const Book = () => {
   const { bookId } = useParams();
   const [showPopup, setShowPopup] = useState(false);
-  const [showComingSoon, setShowComingSoon] = useState(false);
 
   const book = bookDetails[bookId];
 
@@ -131,13 +145,19 @@ const Book = () => {
         <div className="absolute inset-0 pr-4 bg-[#080808] opacity-90 z-0"></div>
         <section className="relative z-10 flex flex-col lg:flex-row items-start gap-8 px-4 py-10">
           <div className="text-white w-full lg:w-3/5 rounded-md mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-6 bg-[#A72024] p-4">
+            <h2 className="text-3xl lg:text-3xl text-center font-semibold mb-6 bg-[#A72024] p-4">
               {book.title}
             </h2>
 
-            <div className="text-lg leading-8 space-y-4">
-              <p>{book.description}</p>
-            </div>
+            <ul className="list-none pl-6 text-lg sm:text-xl">
+              {Array.isArray(book.description) ? (
+                book.description.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))
+              ) : (
+                <li>{book.description}</li>
+              )}
+            </ul>
 
             <div className="hidden md:flex mt-6 justify-end">
               <button
@@ -149,38 +169,35 @@ const Book = () => {
             </div>
             {showPopup && (
               <div
-                className="fixed inset-0 z-[1000] flex items-center justify-center px-4 overflow-hidden"
+                className="fixed inset-0 z-[1000] flex items-center justify-between px-4 overflow-hidden"
                 style={{ position: "fixed", overflow: "hidden" }}
               >
                 <div className="rounded-lg p-6 w-full text-center">
                   <div className="flex justify-end mb-10">
-                    <X size={40}
+                    <X
+                      size={40}
                       className="text-2xl text-white"
                       onClick={() => setShowPopup(false)}
                     />
                   </div>
-                  <div className="grid gap-4 bg-[#262626] py-7 mb-4 lg:grid-cols-3">
-                    <button
+                  <div className="grid gap-4 bg-[#262626] py-7 mb-4 lg:grid-cols-2">
+                    <Link to="https://www.kobo.com/gb/en/search?query=linda+somiari+stewart&ac=1&acp=linda+somiari+stewart&ac.author=linda+somiari+stewart&sort=Temperature&fclanguages=en">
+                      <button className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[200px] lg:w-[150px] mx-auto">
+                        Kobo.com
+                      </button>
+                    </Link>
+                    {/* <button
                       className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[200px] lg:w-[150px] mx-auto"
                       onClick={() => {
                         setShowPopup(false);
                         setShowComingSoon(true);
                       }}
                     >
-                      Amazon (UK)
-                    </button>
-                    <button
-                      className="bg-[#eb2e34] text-white px-4 py-2 rounded w-[200px] lg:w-[150px] mx-auto"
-                      onClick={() => {
-                        setShowPopup(false);
-                        setShowComingSoon(true);
-                      }}
-                    >
-                      Amazon (Int'l)
-                    </button>
-                    <Link to={book.selar}>
+                      Selar
+                    </button> */}
+                    <Link to="https://books.by/linda-somiari-stewart#she-who-loved-a-lie">
                       <button className="bg-[#eb2e34] text-white  px-4 py-2 rounded w-[200px] lg:w-[150px] mx-auto">
-                        Selar
+                        Book.by
                       </button>
                     </Link>
                   </div>
@@ -189,7 +206,7 @@ const Book = () => {
             )}
 
             {/* Coming Soon Modal */}
-            {showComingSoon && (
+            {/* {showComingSoon && (
               <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center px-4">
                 <div className="bg-white rounded-lg p-6 max-w-sm w-full text-center">
                   <h2 className="text-lg font-semibold text-[#A72024] mb-4">
@@ -206,10 +223,10 @@ const Book = () => {
                   </button>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
 
-          <div className="w-full lg:w-[300px] flex-shrink-0 lg:mr-14">
+          <div className="w-full lg:w-[350px] flex-shrink-0 lg:mr-14">
             <img
               src={book.image}
               alt={book.title}
