@@ -51,7 +51,7 @@ function Newsletter() {
             Join my Readers' Club
           </h3>
           <p className="text-lg mb-10">
-            Join my Readers' Club to receive a FREE short stories, plus news of
+            Join my Readers' Club to receive FREE short stories, plus news of
             giveaways, book recommendations, writing tips and more.
           </p>
           {isSubmitted ? (

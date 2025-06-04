@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const text = "LINDA SOMAIRI-STEWART";
+const text = "LINDA SOMIARI-STEWART";
 
 const AnimatedTitle = () => {
   const letters = text.split("");

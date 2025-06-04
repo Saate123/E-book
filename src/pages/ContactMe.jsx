@@ -5,6 +5,7 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import Header from "../components/Headers";
 import Footer from "../components/Footer";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router";
 
 function ContactMe() {
   const form = useRef();
@@ -64,12 +65,12 @@ function ContactMe() {
               <div className="text-lg leading-8 space-y-4">
                 <p>
                   If you’d like to reach out, please feel free to email me at{" "}
-                  <a
-                    href="mailto:hello@linda-x.com"
+                  <Link
+                    to="mailto:hello@linda-x.com"
                     className=" text-[#A72024]"
                   >
                     hello@linda-x.com.
-                  </a>{" "}
+                  </Link>{" "}
                   I love hearing from readers, fellow writers, and kindred
                   spirits.
                 </p>

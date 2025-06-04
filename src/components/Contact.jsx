@@ -40,7 +40,7 @@ function Contact() {
           Join my Readers' Club
         </h2>
         <p className="text-base md:text-lg leading-8 mb-6">
-          Join my Readers Club to receive a FREE short stories, plus news of
+          Join my Readers Club to receive FREE short stories, plus news of
           giveaways, book recommendations, writing tips and more.
         </p>
 

@@ -114,8 +114,8 @@ const bookDetails = {
     ),
     bg: backgroundImage,
     picture: Img3,
-    scribe: "Praise for Tamara: The Gender of God",
-    link: "",
+    scribe: "The Square of Lost Sons",
+    link: "https://docs.google.com/document/d/1nXt3jLdqXNwb4w0yo886DHvSGBTia6n04Rgv_j6VRKw/edit?usp=sharing",
   },
 };
 

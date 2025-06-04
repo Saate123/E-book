@@ -1,4 +1,3 @@
-import React from "react";
 import BackgroundImg from "../assets/about-bg.jpg";
 import Img from "../assets/FB_IMG_1743869048255.jpg";
 
@@ -28,25 +27,25 @@ function AboutUs() {
             About Linda Somiari-Stewart
           </h3>
           <div className="space-y-4 text-base sm:text-lg leading-relaxed">
-            <bold className="mb-[10px]">
-              Journalist. Griot. Keeper of Ancestral Fire.
-            </bold>
             <p>
-              Linda Somiari-Stewart is a journalist-turned-griot with a passion
-              for preserving Africa’s rich storytelling traditions. With an
-              extensive background in both print and television media, she has
-              dedicated her life to reviving the fading art of African oral
-              narratives through the written word.
+              Journalist. Griot. Keeper of Ancestral Fire.
             </p>
             <p>
-              Her acclaimed works—including Woyingi: God Is a Woman , The Legend
-              of Tari-Ere: The Picky Virgin and The Square of Lost Songs-A
-              Modern Griot Tales -celebrate African folklore while boldly
-              exploring themes of gender, identity, the divine feminine and the
-              supernatural. Drawing deeply from her African heritage, her
-              storytelling weaves myth, memory, and philosophy into rich,
-              lyrical narratives that speak to both the personal and the
-              universal.
+              Linda Somiari-Stewart is a journalist-turned-griot with a passion
+              for preserving Africa’s rich values,culture and traditions through
+              storytelling. With an extensive background in both print and
+              television media, she has dedicated her life to reviving Africa’s
+              once cherished but now fading values. <br />
+              Her work is focused on reconnecting people with the pure, sacred
+              essence of life through the art of storytelling. <br />
+              Her acclaimed works—including Woyingi: God Is a Woman ( Tamara:
+              The Gender of God) , The Legend of Tari-Ere: The Picky Virgin( She
+              who loved a lie)and The Square of Lost Songs-A Modern Griot’s
+              Tales -celebrate African folklore while boldly exploring themes of
+              gender, identity, the divine feminine and the supernatural.
+              Drawing deeply from her Ijaw -African heritage, her storytelling
+              weaves myth, memory, and philosophy into rich, lyrical narratives
+              that speak to both the personal and the universal.
             </p>
             <p>
               Today, she is sought after by the young and old across Africa and
@@ -55,17 +54,17 @@ function AboutUs() {
               unclear, or when something deep within longs to be understood.
               With ancestral wisdom and deep listening, she offers more than
               answers—she offers clarity, healing, and direction.
+              <br /> Her clients call her the Ancient Soul Whisperer! Many leave
+              her presence transformed - grounded, renewed, and ready to live
+              more colorful and enriched lives. Her impact echoes through
+              stories, referrals, and lives changed by words both ancient and
+              alive.
             </p>
             <p>
-              Many leave her presence transformed—grounded, renewed, and ready
-              to live more purposeful lives. Her impact echoes through stories,
-              referrals, and lives changed by words both ancient and alive.
-            </p>
-            <p>
-              “She doesn’t just tell stories. She helps you find your own.”
-              <br />
-              Linda Somiari- Stewart is a living proof that wisdom deepens with time and that the griot’s flame burns strong for the
-              generations to come.
+              She doesn’t just tell stories. She helps people find their own
+              stories.<br /> Linda Somiari- Stewart is a living proof that wisdom
+              deepens with time and that the griot’s flame burns strong for the
+              generations to come.
             </p>
           </div>
         </div>
