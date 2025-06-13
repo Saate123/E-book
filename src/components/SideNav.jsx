@@ -9,10 +9,10 @@ function SideNav() {
 
   // Define nav links
   const navLinks = [
-    { to: "/dashboard", label: "Dashboard" },
+    // { to: "/dashboard", label: "Dashboard" },
     { to: "/uploads", label: "Upload Story" },
     { to: "/all-stories", label: "All Stories" },
-    { to: "/settings", label: "Settings" },
+    // { to: "/settings", label: "Settings" },
   ];
   // Find active link
   const activeLink = navLinks.find((link) =>

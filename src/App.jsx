@@ -43,10 +43,8 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="/book/:bookId" element={<Book />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/uploads" element={<Upload />} />
         <Route path="/all-stories" element={<AllStories />} />
-        <Route path="/settings" element={<Settings />} />
       </Routes>
     </HashRouter>
   );

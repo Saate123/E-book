@@ -17,7 +17,7 @@ function Login() {
       return;
     }
     setShowPopup(false);
-    navigate("/dashboard");
+    navigate("/uploads");
   }
 
   return (
