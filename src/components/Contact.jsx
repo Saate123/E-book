@@ -14,10 +14,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_27fbrvj",
-        "template_amzz8ak",
+        "service_ksl2iz5",
+        "template_jmuw2i8",
         form.current,
-        "bYP_o4Ly5gn1Uy9zu"
+        "sMgIbMrARNZ48i5Hy"
       )
       .then(
         () => {
@@ -36,7 +36,10 @@ function Contact() {
     <div className="w-full flex flex-col lg:flex-row justify-center py-16 px-4 sm:px-8 md:px-16 bg-[#080808] gap-8">
       {/* Readers Club Section */}
       <div className="bg-[#202020] w-full lg:w-[550px] p-6 text-white">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold p-3 mb-6 bg-[#A72024]">
+        <h2
+          id="title"
+          className="text-2xl sm:text-3xl md:text-4xl font-semibold p-3 mb-6 bg-[#A72024]"
+        >
           Join my Readers' Club
         </h2>
         <p className="text-base md:text-lg leading-8 mb-6">
@@ -45,11 +48,30 @@ function Contact() {
         </p>
 
         {isSubmitted ? (
-          <div className="bg-[#202020] p-6 rounded-md text-center shadow-md">
+          <div className="bg-[#A72024] p-6 rounded-md text-center shadow-md">
             <p className="text-lg text-white">
-              Thanks for joining me! Look out for the email asking you to confirm
-              your address.
+              Thanks for coming aboard! Keep an eye on your inbox for the
+              confirmation mail.
             </p>
+            <button
+              className="mt-6 px-6 py-2 text-white font-semibold"
+              onClick={() => window.location.reload(true)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-7 w-7 text-[#A72024]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 4v5h.582M20 20v-5h-.581M19.418 9A7.978 7.978 0 0012 4c-3.042 0-5.824 1.721-7.418 4M4.582 15A7.978 7.978 0 0012 20c3.042 0 5.824-1.721 7.418-4"
+                />
+              </svg>
+            </button>
           </div>
         ) : (
           <form className="space-y-4" ref={form} onSubmit={sendEmail}>

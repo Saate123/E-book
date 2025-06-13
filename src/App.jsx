@@ -11,6 +11,11 @@ import Book from "./pages/Books";
 import StoryPopup from "./components/Story";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Upload from "./pages/Upload";
+import AllStories from "./pages/AllStories";
+import Settings from "./pages/Settings";
 
 
 function App() {
@@ -31,12 +36,17 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/story/:storyKey" element={<StoryPopup />} />
+        <Route path="/story/:id" element={<StoryPopup />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactMe />} />
         <Route path="/events" element={<NewsEvents />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/book/:bookId" element={<Book />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/uploads" element={<Upload />} />
+        <Route path="/all-stories" element={<AllStories />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </HashRouter>
   );

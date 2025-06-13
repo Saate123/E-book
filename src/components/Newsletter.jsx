@@ -5,31 +5,31 @@ import emailjs from "@emailjs/browser";
 
 function Newsletter() {
   const form = useRef();
-    const [isLoading, setIsLoading] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-  
-    const sendEmail = (e) => {
-      e.preventDefault();
-      setIsLoading(true);
-  
-      emailjs
-        .sendForm(
-          "service_27fbrvj",
-          "template_amzz8ak",
-          form.current,
-          "bYP_o4Ly5gn1Uy9zu"
-        )
-        .then(
-          () => {
-            setIsLoading(false);
-            setIsSubmitted(true);
-          },
-          (error) => {
-            setIsLoading(false);
-            alert("Failed to send message. Please try again.");
-            console.error(error);
-          }
-        );
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_ksl2iz5",
+        "template_jmuw2i8",
+        form.current,
+        "sMgIbMrARNZ48i5Hy"
+      )
+      .then(
+        () => {
+          setIsLoading(false);
+          setIsSubmitted(true);
+        },
+        (error) => {
+          setIsLoading(false);
+          alert("Failed to send message. Please try again.");
+          console.error(error);
+        }
+      );
   };
 
   return (
@@ -47,7 +47,10 @@ function Newsletter() {
           />
         </div>
         <div className="py-5">
-          <h3 className="text-3xl sm:text-4xl text-[#D7FF00] md:text-5xl leading-tight mb-10">
+          <h3
+            id="title"
+            className="text-3xl sm:text-4xl text-[#D7FF00] md:text-5xl leading-tight mb-10"
+          >
             Join my Readers' Club
           </h3>
           <p className="text-lg mb-10">
@@ -55,11 +58,32 @@ function Newsletter() {
             giveaways, book recommendations, writing tips and more.
           </p>
           {isSubmitted ? (
-            <div className="bg-[#202020] p-6 rounded-md text-center shadow-md">
-              <p className="text-lg text-white">
-                Thanks for joining me! Look out for the email asking you to
-                confirm your address.
+            <div className="bg-[#A72024] p-6 rounded-md text-center shadow-md flex flex-col items-center">
+              <p className="text-lg text-white mb-6">
+                Thanks for coming aboard! Keep an eye on your inbox for the
+                confirmation mail.
               </p>
+              <button
+                className="mt-2 p-3 rounded-full bg-[#D7FF00] hover:bg-[#b6cc00] transition-colors"
+                onClick={() => window.location.reload(true)}
+                aria-label="Refresh"
+              >
+                {/* Refresh Icon (SVG) */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-7 w-7 text-[#A72024]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 4v5h.582M20 20v-5h-.581M19.418 9A7.978 7.978 0 0012 4c-3.042 0-5.824 1.721-7.418 4M4.582 15A7.978 7.978 0 0012 20c3.042 0 5.824-1.721 7.418-4"
+                  />
+                </svg>
+              </button>
             </div>
           ) : (
             <form className="space-y-4" ref={form} onSubmit={sendEmail}>
