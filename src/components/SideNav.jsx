@@ -12,7 +12,8 @@ function SideNav() {
     // { to: "/dashboard", label: "Dashboard" },
     { to: "/uploads", label: "Upload Story" },
     { to: "/all-stories", label: "All Stories" },
-    // { to: "/settings", label: "Settings" },
+    { to: "/articles-upload", label: "Upload Article" },
+    { to: "/all-articles", label: "All Articles" },
   ];
   // Find active link
   const activeLink = navLinks.find((link) =>

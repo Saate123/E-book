@@ -8,14 +8,15 @@ import ContactMe from "./pages/ContactMe";
 import Articles from "./pages/Articles";
 import NewsEvents from "./pages/NewsEvents";
 import Book from "./pages/Books";
-import StoryPopup from "./components/Story";
+import StoryPopup from "./pages/Story";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
 import Upload from "./pages/Upload";
 import AllStories from "./pages/AllStories";
-import Settings from "./pages/Settings";
+import FullArticle from "./pages/FullArticle";
+import ArticlesUpload from "./pages/ArticlesUpload";
+import AllArticles from "./pages/AllArticles";
 
 
 function App() {
@@ -41,10 +42,13 @@ function App() {
         <Route path="/contact" element={<ContactMe />} />
         <Route path="/events" element={<NewsEvents />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/article/:id" element={<FullArticle />} />
         <Route path="/book/:bookId" element={<Book />} />
         <Route path="/login" element={<Login />} />
         <Route path="/uploads" element={<Upload />} />
         <Route path="/all-stories" element={<AllStories />} />
+        <Route path="/all-articles" element={<AllArticles />} />
+        <Route path="/articles-upload" element={<ArticlesUpload />} />
       </Routes>
     </HashRouter>
   );
