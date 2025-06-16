@@ -88,7 +88,7 @@ function OtherBooks() {
           // IMPORTANT: Replace 'window.location.origin' with your actual deployed domain
           // if you want direct sharing to work from a local environment, or
           // ensure your 'story/:id' route is properly handled by your hosting.
-          const storyShareUrl = `${window.location.origin}#/story/${story.id}`;
+          const storyShareUrl = `https://linda-x.com/#/story/${story.id}`;
           const shareTitle = `Read "${story.title}" by Linda on My Ebook Site!`; // Customize share title
           const shareDescription = story.description.substring(0, 150) + "..."; // Customize share description
 
