@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import supabase from "../config/supabaseClient"; // Ensure this path is correct
-import { Helmet } from "react-helmet-async"; // <-- IMPORT HELMET
-
+import React, { useEffect, useState } from "react";
+import supabase from "../config/supabaseClient"; 
 
 function StoryPopup() {
   const navigate = useNavigate();
@@ -15,6 +13,7 @@ function StoryPopup() {
   useEffect(() => {
     const fetchStory = async () => {
       if (!id) {
+        // Ensure id exists before attempting to fetch
         setError("No story ID provided.");
         setLoading(false);
         return;
@@ -24,12 +23,11 @@ function StoryPopup() {
         setLoading(true);
         setError(null);
 
-        // IMPORTANT: Fetch description and subtitle from Supabase for meta tags
         const { data, error: fetchError } = await supabase
           .from("stories")
-          .select("title, subtitle, description, image_url, content")
-          .eq("id", id)
-          .single();
+          .select("title, image_url, content") // Fetch only title, image_url, and content
+          .eq("id", id) // Filter by the story ID from the URL
+          .single(); // Expect only one record
 
         if (fetchError) {
           throw fetchError;
@@ -67,7 +65,7 @@ function StoryPopup() {
           <p className="text-red-500 text-xl">Error: {error}</p>
           <button
             className="bg-blue-600 text-white rounded px-4 py-2 mt-4 hover:bg-blue-700"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate(-1)} // Go back to the previous page
           >
             Go Back
           </button>
@@ -83,7 +81,7 @@ function StoryPopup() {
           <p className="text-xl">Story not found.</p>
           <button
             className="bg-blue-600 text-white rounded px-4 py-2 mt-4 hover:bg-blue-700"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate(-1)} // Go back to the previous page
           >
             Go Back
           </button>
@@ -91,44 +89,18 @@ function StoryPopup() {
       </div>
     );
   }
-  const pageTitle = `${story.title} - Short Stories by Linda`;
-  const pageDescription = story.description
-    ? story.description.substring(0, 160) +
-      (story.description.length > 160 ? "..." : "")
-    : story.content.substring(0, 160) +
-      (story.content.length > 160 ? "..." : ""); // Fallback to content if description is empty
-  const pageImage = story.image_url;
-  const pageUrl = `${window.location.origin}/story/${story.id}`;
 
   // --- Main Render for Displaying the Story ---
   return (
     <div className="flex flex-col items-center bg-black min-h-screen p-4">
-      {/* ===== CRUCIAL PART FOR SOCIAL SHARING PREVIEWS ===== */}
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        {/* Open Graph / Facebook / LinkedIn Meta Tags */}
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:type" content="article" />{" "}
-        {/* Use 'article' for individual stories */}
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content={pageImage} />{" "}
-        {/* THIS IS THE IMAGE FOR THE PREVIEW */}
-        <meta property="og:site_name" content="My Ebook Site" />
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />{" "}
-        {/* 'summary_large_image' for a prominent image */}
-        <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content={pageImage} />
-      </Helmet>
-
       <div className="w-full max-w-2xl bg-white rounded-lg shadow-2xl p-6 mt-8 mb-8 animate-fade-in relative">
-        {/* Back button positioning for better usability */}
-        <Link to="/" className="absolute -top-12 left-0 sm:left-4">
-          <button className="text-white w-[100px] hover:bg-gray-700 font-semibold flex items-center gap-1 p-3 bg-[#E02B20] rounded-md transition duration-300">
+        {/* Back button in top-left */}
+        <Link to="/">
+          {/* Note: The button's position 'bottom-0 right-0 lg:-left-26'
+              might put it off-screen or not where intended.
+              Consider 'top-4 left-4' or similar for a typical back button.
+              I'm keeping your original Tailwind classes for now. */}
+          <button className="absolute bottom-0 right-0 lg:-left-26 text-white w-[100px] hover:text-blue-700 font-semibold flex items-center gap-1 p-3 bg-[#E02B20] ">
             <svg
               width="24"
               height="24"
@@ -144,7 +116,7 @@ function StoryPopup() {
         </Link>
 
         {/* Story image */}
-        {story.image_url && (
+        {story.image_url && ( // Use story.image_url from Supabase
           <img
             src={story.image_url}
             alt={story.title}
@@ -155,9 +127,8 @@ function StoryPopup() {
         <h1 className="font-serif text-2xl md:text-3xl text-gray-900 mb-1">
           {story.title}
         </h1>
-        {story.subtitle && (
-          <p className="italic text-gray-500 mb-3 text-lg">{story.subtitle}</p>
-        )}
+        {/* Removed subtitle as per your request for this component */}
+        {/* Removed description as per your request for this component */}
 
         {/* Story content */}
         <div
@@ -167,6 +138,7 @@ function StoryPopup() {
             fontSize: "1.1rem",
           }}
         >
+          {/* Assuming story.content is a single string. If it's an array of paragraphs, you might need to map over it or join it with line breaks. */}
           {story.content}
         </div>
       </div>
