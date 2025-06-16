@@ -20,7 +20,9 @@ import AllArticles from "./pages/AllArticles";
 
 
 function App() {
-  // Scroll to top on route change
+  // Scroll to top on route change using a custom component
+  // This component listens to the location changes and scrolls to the top
+  // when the pathname changes, ensuring a smooth user experience
 
   function ScrollToTop() {
     const { pathname } = useLocation();
