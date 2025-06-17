@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import supabase from "../config/supabaseClient";
 import { useEffect, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Articles() {
   // const navigate = useNavigate();
@@ -53,15 +53,21 @@ function Articles() {
           {!loading && !error && articles.length === 0 && (
             <p>No articles found.</p>
           )}
-          {!loading && !error && articles.map((article) => (
-            <div key={article.id} className="bg-gray-200 p-4 rounded-lg">
-              <Link to={`/article/${article.id}`}>
-                <img src={article.image_url || ""} alt={article.title} />
-                <p>{article.title}</p>
-              </Link>
-              <p>{article.description}</p>
-            </div>
-          ))}
+          {!loading &&
+            !error &&
+            articles.map((article) => (
+              <div key={article.id} className="shadow-lg rounded-lg">
+                <Link to={`/article/${article.id}`}>
+                  <img
+                    src={article.image_url || ""}
+                    alt={article.title}
+                    className="w-full h-auto block mb-4 rounded-t-lg object-cover "
+                  />
+                  <p className="font-semibold p-4">{article.title}</p>
+                </Link>
+                <p className="p-4">{article.description}</p>
+              </div>
+            ))}
         </div>
       </div>
       <Contact />

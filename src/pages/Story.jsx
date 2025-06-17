@@ -1,6 +1,7 @@
 import { useNavigate, useParams, Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import supabase from "../config/supabaseClient"; 
+import supabase from "../config/supabaseClient";
+import { Helmet } from "react-helmet";
 
 function StoryPopup() {
   const navigate = useNavigate();
@@ -92,57 +93,72 @@ function StoryPopup() {
 
   // --- Main Render for Displaying the Story ---
   return (
-    <div className="flex flex-col items-center bg-black min-h-screen p-4">
-      <div className="w-full max-w-2xl bg-white rounded-lg shadow-2xl p-6 mt-8 mb-8 animate-fade-in relative">
-        {/* Back button in top-left */}
-        <Link to="/">
-          {/* Note: The button's position 'bottom-0 right-0 lg:-left-26'
+    <>
+      <Helmet>
+        <title>{story.title}</title>
+        <meta property="og:title" content={story.title} />
+        <meta
+          property="og:description"
+          content={"Read the full story on Linda-X"}
+        />
+        <meta property="og:image" content={story.image_url} />
+        <meta
+          property="og:url"
+          content={`https://linda-x.com/#/story/${story.id}`}
+        />
+      </Helmet>
+      <div className="flex flex-col items-center bg-black min-h-screen p-4">
+        <div className="w-full max-w-2xl bg-white rounded-lg shadow-2xl p-6 mt-8 mb-8 animate-fade-in relative">
+          {/* Back button in top-left */}
+          <Link to="/">
+            {/* Note: The button's position 'bottom-0 right-0 lg:-left-26'
               might put it off-screen or not where intended.
               Consider 'top-4 left-4' or similar for a typical back button.
               I'm keeping your original Tailwind classes for now. */}
-          <button className="absolute bottom-0 right-0 lg:-left-26 text-white w-[100px] hover:text-blue-700 font-semibold flex items-center gap-1 p-3 bg-[#E02B20] ">
-            <svg
-              width="24"
-              height="24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-            Back
-          </button>
-        </Link>
+            <button className="absolute bottom-0 right-0 lg:-left-26 text-white w-[100px] hover:text-blue-700 font-semibold flex items-center gap-1 p-3 bg-[#E02B20] ">
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+              Back
+            </button>
+          </Link>
 
-        {/* Story image */}
-        {story.image_url && ( // Use story.image_url from Supabase
-          <img
-            src={story.image_url}
-            alt={story.title}
-            className="w-full max-h-80 object-cover rounded-md mb-6"
-          />
-        )}
+          {/* Story image */}
+          {story.image_url && ( // Use story.image_url from Supabase
+            <img
+              src={story.image_url}
+              alt={story.title}
+              className="w-full max-h-80 object-cover rounded-md mb-6"
+            />
+          )}
 
-        <h1 className="font-serif text-2xl md:text-3xl text-gray-900 mb-1">
-          {story.title}
-        </h1>
-        {/* Removed subtitle as per your request for this component */}
-        {/* Removed description as per your request for this component */}
+          <h1 className="font-serif text-2xl md:text-3xl text-gray-900 mb-1">
+            {story.title}
+          </h1>
+          {/* Removed subtitle as per your request for this component */}
+          {/* Removed description as per your request for this component */}
 
-        {/* Story content */}
-        <div
-          id="popup-story-content"
-          className="text-gray-800 whitespace-pre-line leading-relaxed"
-          style={{
-            fontSize: "1.1rem",
-          }}
-        >
-          {/* Assuming story.content is a single string. If it's an array of paragraphs, you might need to map over it or join it with line breaks. */}
-          {story.content}
+          {/* Story content */}
+          <div
+            id="popup-story-content"
+            className="text-gray-800 whitespace-pre-line leading-relaxed"
+            style={{
+              fontSize: "1.1rem",
+            }}
+          >
+            {/* Assuming story.content is a single string. If it's an array of paragraphs, you might need to map over it or join it with line breaks. */}
+            {story.content}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
