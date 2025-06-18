@@ -81,7 +81,7 @@ function OtherBooks() {
       <h1 className="text-center text-3xl md:text-5xl mb-10 text-[#E02B20]">
         Short Stories By Linda
       </h1>
-      <div className="grid gap-8 transition-all duration-300">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 transition-all duration-300">
         {stories.map((story) => {
           // Construct the dynamic URL for each story
           // IMPORTANT: Replace 'window.location.origin' with your actual deployed domain
@@ -124,10 +124,18 @@ function OtherBooks() {
                   <div className="flex gap-2">
                     {" "}
                     {/* Container for individual share buttons */}
-                    <FacebookShareButton url={storyShareUrl} image_url={shareImageURL} quote={shareTitle}>
+                    <FacebookShareButton
+                      url={storyShareUrl}
+                      image_url={shareImageURL}
+                      quote={shareTitle}
+                    >
                       <FacebookIcon size={32} round />
                     </FacebookShareButton>
-                    <TwitterShareButton url={storyShareUrl} title={shareTitle} image_url={shareImageURL}>
+                    <TwitterShareButton
+                      url={storyShareUrl}
+                      title={shareTitle}
+                      image_url={shareImageURL}
+                    >
                       <TwitterIcon size={32} round />
                     </TwitterShareButton>
                     <LinkedinShareButton
@@ -138,7 +146,11 @@ function OtherBooks() {
                     >
                       <LinkedinIcon size={32} round />
                     </LinkedinShareButton>
-                    <WhatsappShareButton url={storyShareUrl} title={shareTitle} image_url={shareImageURL}>
+                    <WhatsappShareButton
+                      url={storyShareUrl}
+                      title={shareTitle}
+                      image_url={shareImageURL}
+                    >
                       <WhatsappIcon size={32} round />
                     </WhatsappShareButton>
                   </div>

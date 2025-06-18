@@ -39,6 +39,37 @@ function AllArticles() {
     fetchArticles(); // Call the fetch function when the component mounts
   }, []); // Empty dependency array means this effect runs once after the initial render
 
+  // Modal state for delete confirmation
+  const [showModal, setShowModal] = useState(false);
+  const [deleteId, setDeleteId] = useState(null);
+
+  const handleDeleteClick = (id) => {
+    setDeleteId(id);
+    setShowModal(true);
+  };
+
+  const handleConfirmDelete = async () => {
+    try {
+      const { error } = await supabase.from("articles").delete().eq("id", deleteId);
+      if (error) {
+        throw error;
+      }
+      setArticles((prev) => prev.filter((article) => article.id !== deleteId));
+      setShowModal(false);
+      setDeleteId(null);
+    } catch (err) {
+      alert("Failed to delete article. Please try again.");
+      console.error("Delete error:", err);
+      setShowModal(false);
+      setDeleteId(null);
+    }
+  };
+
+  const handleCancelDelete = () => {
+    setShowModal(false);
+    setDeleteId(null);
+  };
+
   if (loading) {
     return (
       <div className="max-w-screen p-10 bg-black relative min-h-screen flex justify-center items-center">
@@ -46,30 +77,6 @@ function AllArticles() {
       </div>
     );
   }
-
-  if (error) {
-    return (
-      <div className="max-w-screen p-10 bg-black relative min-h-screen flex justify-center items-center">
-        <p className="text-red-500 text-xl">Error: {error}</p>
-      </div>
-    );
-  }
-
-  if (articles.length === 0) {
-    return (
-      <div className="max-w-screen p-10 bg-black relative min-h-screen flex justify-center items-center">
-        <p className="text-white text-xl">
-          No articles found yet. Time to write some!
-        </p>
-      </div>
-    );
-  }
-
-  // Dummy handleDelete function (replace with your actual logic)
-  const handleDelete = (id) => {
-    // TODO: Implement delete logic here, e.g., call API or update state
-    alert(`Delete article with id: ${id}`);
-  };
 
   return (
     <div className="flex">
@@ -85,19 +92,50 @@ function AllArticles() {
           {!loading &&
             !error &&
             articles.map((article) => (
-              <div key={article.id}>
-                <img src={article.image_url || ""} alt={article.title} />
-                <p>{article.title}</p>
-                <p>{article.description}</p>
+              <div
+                key={article.id}
+                className="bg-white rounded-lg shadow-md flex flex-col items-center transition hover:shadow-lg"
+              >
+                <img
+                  src={article.image_url || ""}
+                  alt={article.title}
+                  className="w-20 h-auto block mb-4 rounded-t-lg object-cover"
+                />
+                <p className="font-semibold text-lg mb-2 p-4 text-center">{article.title}</p>
+                <p className="text-gray-600 mb-4 text-center p-4">{article.description}</p>
                 <button
-                  className="px-4 py-2 font-semibold bg-[#E02B20] text-white transition"
-                  onClick={() => handleDelete(article.id)}
+                  className="px-4 py-2 font-semibold bg-[#E02B20] text-white rounded hover:bg-red-700 transition"
+                  onClick={() => handleDeleteClick(article.id)}
                 >
                   Delete
                 </button>
               </div>
             ))}
         </div>
+        {/* Delete Confirmation Modal */}
+        {showModal && (
+          <div className="fixed inset-0 flex items-center justify-center bg-blur z-50">
+            <div className="bg-white p-6 rounded shadow-lg">
+              <p className="mb-4">
+                Are you sure you want to delete this article?
+              </p>
+              <div className="flex justify-end space-x-4">
+                <button
+                  className="px-4 py-2 bg-gray-300 rounded"
+                  onClick={handleCancelDelete}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="px-4 py-2 bg-red-600 text-white rounded"
+                  onClick={handleConfirmDelete}
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

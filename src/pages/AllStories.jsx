@@ -6,6 +6,8 @@ function AllStories() {
   const [stories, setStories] = useState([]); // State to hold our fetched stories
   const [loading, setLoading] = useState(true); // Tracks if data is still loading
   const [error, setError] = useState(null); // Stores any error messages
+  const [showModal, setShowModal] = useState(false);
+  const [deleteId, setDeleteId] = useState(null);
 
   useEffect(() => {
     const fetchStories = async () => {
@@ -47,29 +49,54 @@ function AllStories() {
     );
   }
 
-  if (error) {
-    return (
-      <div className="max-w-screen p-10 bg-black relative min-h-screen flex justify-center items-center">
-        <p className="text-red-500 text-xl">Error: {error}</p>
-      </div>
-    );
-  }
+    if (error) {
+      return (
+        <div className="max-w-screen p-10 bg-black relative min-h-screen flex justify-center items-center">
+          <p className="text-red-500 text-xl">Error: {error}</p>
+        </div>
+      );
+    }
 
-  if (stories.length === 0) {
-    return (
-      <div className="max-w-screen p-10 bg-black relative min-h-screen flex justify-center items-center">
-        <p className="text-white text-xl">
-          No stories found yet. Time to write some!
-        </p>
-      </div>
-    );
-  }
+    if (stories.length === 0) {
+      return (
+        <div className="max-w-screen p-10 bg-black relative min-h-screen flex justify-center items-center">
+          <p className="text-white text-xl">
+            No stories found yet. Time to write some!
+          </p>
+        </div>
+      );
+    }
 
-  // Dummy handleDelete function (replace with your actual logic)
-  const handleDelete = (id) => {
-    // TODO: Implement delete logic here, e.g., call API or update state
-    alert(`Delete story with id: ${id}`);
+  const handleDeleteClick = (id) => {
+    setDeleteId(id);
+    setShowModal(true);
   };
+
+  const handleConfirmDelete = async () => {
+    try {
+      const { error } = await supabase
+        .from("stories")
+        .delete()
+        .eq("id", deleteId);
+      if (error) {
+        throw error;
+      }
+      setStories((prev) => prev.filter((story) => story.id !== deleteId));
+      setShowModal(false);
+      setDeleteId(null);
+    } catch (err) {
+      alert("Failed to delete story. Please try again.");
+      console.error("Delete error:", err);
+      setShowModal(false);
+      setDeleteId(null);
+    }
+  };
+
+  const handleCancelDelete = () => {
+    setShowModal(false);
+    setDeleteId(null);
+  };
+
   // Ensure the parent div uses flex to place SideNav and body side by side
   return (
     <div className="flex">
@@ -99,13 +126,42 @@ function AllStories() {
                 <p className="text-gray-700 mb-2">{story.description}</p>
                 <button
                   className="px-4 py-2 font-semibold bg-[#E02B20] text-white transition"
-                  onClick={() => handleDelete(story.id)}
+                  onClick={() => handleDeleteClick(story.id)}
                 >
                   Delete
                 </button>
               </div>
             </div>
           ))}
+
+          {showModal && (
+            <div className="fixed inset-0 flex items-center justify-center z-50">
+              <div className="bg-white p-6 rounded shadow-lg">
+                <p className="mb-4">
+                  Are you sure you want to delete this story: <br></br>
+                  {
+                    stories.find((s) => s.id === deleteId)?.title ||
+                    "story"
+                  }
+                  ?
+                </p>
+                <div className="flex justify-end space-x-4">
+                  <button
+                    className="px-4 py-2 bg-gray-300 rounded"
+                    onClick={handleCancelDelete}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    className="px-4 py-2 bg-red-600 text-white rounded"
+                    onClick={handleConfirmDelete}
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

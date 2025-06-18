@@ -3,7 +3,7 @@ import SideNav from "../components/SideNav";
 import supabase from "../config/supabaseClient";
 
 function ArticlesUpload() {
-  const [activeTitle, setActiveTitle] = React.useState("Articles Upload");
+  const [activeTitle, setActiveTitle] = React.useState("Upload Article");
 
   // State for file upload
   const [file, setFile] = React.useState(null);
