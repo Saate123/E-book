@@ -101,15 +101,9 @@ function FullArticle() {
           </h2>
         </div>
         <div className="flex flex-col md:flex-row">
-          {/* Content Section */}
-          <div className="flex-1 min-w-0 lg:ml-25 md:ml-0">
-            <div className="prose max-w-none">
-              <p>{article.content}</p>
-            </div>
-          </div>
-          {/* Image Section */}
+          {/* Image Section (shows first on mobile, second on desktop) */}
           {article.image_url && (
-            <div className="md:w-1/3 w-full flex-shrink-0 flex justify-center items-start lg:mr-25 md:mr-0">
+            <div className="md:order-2 md:w-1/3 w-full flex-shrink-0 flex justify-center items-start lg:mr-25 md:mr-0 mb-4 md:mb-0">
               <img
                 src={article.image_url}
                 alt={article.title}
@@ -117,6 +111,12 @@ function FullArticle() {
               />
             </div>
           )}
+          {/* Content Section */}
+          <div className="flex-1 min-w-0 lg:ml-25 md:ml-0 md:order-1">
+            <div className="prose max-w-none">
+              <p>{article.content}</p>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
