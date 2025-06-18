@@ -87,7 +87,6 @@ function OtherBooks() {
           // IMPORTANT: Replace 'window.location.origin' with your actual deployed domain
           // if you want direct sharing to work from a local environment, or
           // ensure your 'story/:id' route is properly handled by your hosting.
-          const shareImageURL = `${story.image_url}`;
           const storyShareUrl = `https://linda-x.com/#/story/${story.id}`;
           const shareTitle = `Read "${story.title}" by Linda on My Ebook Site!`; // Customize share title
           const shareDescription = story.description.substring(0, 150) + "..."; // Customize share description
@@ -126,15 +125,15 @@ function OtherBooks() {
                     {/* Container for individual share buttons */}
                     <FacebookShareButton
                       url={storyShareUrl}
-                      image_url={shareImageURL}
-                      quote={shareTitle}
+                      title={shareTitle}
+                      summary={shareDescription}
                     >
                       <FacebookIcon size={32} round />
                     </FacebookShareButton>
                     <TwitterShareButton
                       url={storyShareUrl}
                       title={shareTitle}
-                      image_url={shareImageURL}
+                      summary={shareDescription}
                     >
                       <TwitterIcon size={32} round />
                     </TwitterShareButton>
@@ -142,14 +141,13 @@ function OtherBooks() {
                       url={storyShareUrl}
                       title={shareTitle}
                       summary={shareDescription}
-                      image_url={shareImageURL}
                     >
                       <LinkedinIcon size={32} round />
                     </LinkedinShareButton>
                     <WhatsappShareButton
                       url={storyShareUrl}
                       title={shareTitle}
-                      image_url={shareImageURL}
+                      summary={shareDescription}
                     >
                       <WhatsappIcon size={32} round />
                     </WhatsappShareButton>
