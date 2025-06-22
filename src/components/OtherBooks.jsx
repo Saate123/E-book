@@ -119,11 +119,16 @@ function OtherBooks() {
                     onClick={() => navigate(`/story/${story.id}`)}
                   >
                     Read more...
-                  </button>
+                  </button> 
+                  <h5 className="font-bold">OR</h5>
                   {/* Share Buttons */}
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 items-center">
                     {" "}
-                    {/* Container for individual share buttons */}
+                    {/* Encourage readers to share the book */}
+                    <p className="text-sm text-gray-600 mb-1">
+                      Share with friends!
+                    </p>
+                    {/* Social Media Share Buttons */}
                     <FacebookShareButton
                       url={storyShareUrl}
                       title={shareTitle}
@@ -132,14 +137,14 @@ function OtherBooks() {
                       // image_url prop is generally ignored by Facebook for rich previews
                       // Ensure Open Graph meta tags are correctly set on the shared page (StoryPopup.jsx)
                     >
-                      <FacebookIcon size={32} round />
+                      <FacebookIcon size={28} round />
                     </FacebookShareButton>
                     <TwitterShareButton
                       url={storyShareUrl}
                       title={shareTitle}
                       // Twitter also relies heavily on Twitter Card meta tags for rich previews
                     >
-                      <TwitterIcon size={32} round />
+                      <TwitterIcon size={28} round />
                     </TwitterShareButton>
                     <LinkedinShareButton
                       url={storyShareUrl}
@@ -147,14 +152,14 @@ function OtherBooks() {
                       summary={shareDescription}
                       // LinkedIn also relies on Open Graph meta tags for rich previews
                     >
-                      <LinkedinIcon size={32} round />
+                      <LinkedinIcon size={28} round />
                     </LinkedinShareButton>
                     <WhatsappShareButton
                       url={storyShareUrl}
                       title={shareTitle}
                       // Whatsapp's preview behavior can vary, often simpler than FB/LI
                     >
-                      <WhatsappIcon size={32} round />
+                      <WhatsappIcon size={28} round />
                     </WhatsappShareButton>
                   </div>
                 </div>

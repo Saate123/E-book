@@ -102,13 +102,12 @@ function StoryPopup() {
 
   const storyShareUrl = `https://linda-x.com/#/story/${id}`;
   const shareTitle = `Read "${story.title}" by Linda on My Ebook Site!`;
-  const shareImage = story.image_url;
   const shareDescription = story?.content?.slice(0, 100) + (story?.content?.length > 100 ? "..." : "");
 
   // --- Main Render for Displaying the Story ---
   return (
     <div className="flex flex-col items-center bg-black min-h-screen p-4">
-      <div className="w-full max-w-2xl bg-white rounded-lg shadow-2xl p-6 mt-8 mb-8 animate-fade-in relative">
+      <div className="w-full max-w-2xl bg-white shadow-2xl p-6 mt-8 mb-8 animate-fade-in relative">
         {/* Back button in top-left */}
         <Link to="/">
           <button className="absolute bottom-0 right-0 lg:-left-26 text-white w-[100px] hover:text-blue-700 font-semibold flex items-center gap-1 p-3 bg-[#E02B20] ">
@@ -127,7 +126,7 @@ function StoryPopup() {
         </Link>
 
         {/* Story image */}
-        {story.image_url && ( // Use story.image_url from Supabase
+        {story.image_url && (
           <img
             src={story.image_url}
             alt={story.title}
@@ -138,8 +137,6 @@ function StoryPopup() {
         <h1 className="font-serif text-2xl md:text-3xl text-gray-900 mb-1">
           {story.title}
         </h1>
-        {/* Removed subtitle as per your request for this component */}
-        {/* Removed description as per your request for this component */}
 
         {/* Story content */}
         <div
@@ -149,13 +146,15 @@ function StoryPopup() {
             fontSize: "1.1rem",
           }}
         >
-          {/* Assuming story.content is a single string. If it's an array of paragraphs, you might need to map over it or join it with line breaks. */}
           {story.content}
         </div>
 
+        {/* Share write-up */}
+        <div className="mt-6 mb-2 text-[#E02B20] font-semibold text-base">
+          Enjoyed this story? Share it with your friends!
+        </div>
+
         <div className="flex gap-2 mt-2.5">
-          {" "}
-          {/* Container for individual share buttons */}
           <FacebookShareButton
             url={storyShareUrl}
             title={shareTitle}
