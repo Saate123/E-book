@@ -1,6 +1,16 @@
 import { useNavigate, useParams, Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import supabase from "../config/supabaseClient";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton,
+  FacebookIcon, // Import icons for convenience
+  TwitterIcon,
+  LinkedinIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share";
 
 function StoryPopup() {
   const navigate = useNavigate();
@@ -90,16 +100,17 @@ function StoryPopup() {
     );
   }
 
+  const storyShareUrl = `https://linda-x.com/#/story/${id}`;
+  const shareTitle = `Read "${story.title}" by Linda on My Ebook Site!`;
+  const shareImage = story.image_url;
+  const shareDescription = story?.content?.slice(0, 100) + (story?.content?.length > 100 ? "..." : "");
+
   // --- Main Render for Displaying the Story ---
   return (
     <div className="flex flex-col items-center bg-black min-h-screen p-4">
       <div className="w-full max-w-2xl bg-white rounded-lg shadow-2xl p-6 mt-8 mb-8 animate-fade-in relative">
         {/* Back button in top-left */}
         <Link to="/">
-          {/* Note: The button's position 'bottom-0 right-0 lg:-left-26'
-              might put it off-screen or not where intended.
-              Consider 'top-4 left-4' or similar for a typical back button.
-              I'm keeping your original Tailwind classes for now. */}
           <button className="absolute bottom-0 right-0 lg:-left-26 text-white w-[100px] hover:text-blue-700 font-semibold flex items-center gap-1 p-3 bg-[#E02B20] ">
             <svg
               width="24"
@@ -140,6 +151,39 @@ function StoryPopup() {
         >
           {/* Assuming story.content is a single string. If it's an array of paragraphs, you might need to map over it or join it with line breaks. */}
           {story.content}
+        </div>
+
+        <div className="flex gap-2 mt-2.5">
+          {" "}
+          {/* Container for individual share buttons */}
+          <FacebookShareButton
+            url={storyShareUrl}
+            title={shareTitle}
+            summary={shareDescription}
+          >
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
+          <TwitterShareButton
+            url={storyShareUrl}
+            title={shareTitle}
+            summary={shareDescription}
+          >
+            <TwitterIcon size={32} round />
+          </TwitterShareButton>
+          <LinkedinShareButton
+            url={storyShareUrl}
+            title={shareTitle}
+            summary={shareDescription}
+          >
+            <LinkedinIcon size={32} round />
+          </LinkedinShareButton>
+          <WhatsappShareButton
+            url={storyShareUrl}
+            title={shareTitle}
+            summary={shareDescription}
+          >
+            <WhatsappIcon size={32} round />
+          </WhatsappShareButton>
         </div>
       </div>
     </div>

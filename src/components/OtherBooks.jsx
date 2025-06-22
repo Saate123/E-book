@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import supabase from "../config/supabaseClient"; // Ensure this path is correct
+import supabase from "../config/supabaseClient";
 
 // Fix: Removed import for 'react-share-social' and imported components from 'react-share'
 import {
@@ -12,7 +12,7 @@ import {
   LinkedinIcon,
   WhatsappShareButton,
   WhatsappIcon,
-} from "react-share";
+} from "react-share"; // IMPORTANT: Ensure 'react-share' is installed: npm install react-share
 
 function OtherBooks() {
   const navigate = useNavigate();
@@ -32,7 +32,12 @@ function OtherBooks() {
           .select("id, title, subtitle, description, image_url"); // Requesting only these columns
 
         if (error) {
-          throw error; // If Supabase returns an error, throw it
+          // If Supabase returns an error, throw it
+          // Log the full Supabase error object for better debugging
+          console.error("Supabase fetch error:", error);
+          throw new Error(
+            error.message || "Failed to fetch data from Supabase."
+          );
         }
 
         if (data) {
@@ -83,10 +88,6 @@ function OtherBooks() {
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 transition-all duration-300">
         {stories.map((story) => {
-          // Construct the dynamic URL for each story
-          // IMPORTANT: Replace 'window.location.origin' with your actual deployed domain
-          // if you want direct sharing to work from a local environment, or
-          // ensure your 'story/:id' route is properly handled by your hosting.
           const storyShareUrl = `https://linda-x.com/#/story/${story.id}`;
           const shareTitle = `Read "${story.title}" by Linda on My Ebook Site!`; // Customize share title
           const shareDescription = story.description.substring(0, 150) + "..."; // Customize share description
@@ -119,21 +120,24 @@ function OtherBooks() {
                   >
                     Read more...
                   </button>
-                  {/* Share Buttons - Fixed to use react-share components */}
+                  {/* Share Buttons */}
                   <div className="flex gap-2">
                     {" "}
                     {/* Container for individual share buttons */}
                     <FacebookShareButton
                       url={storyShareUrl}
                       title={shareTitle}
-                      summary={shareDescription}
+                      // For Facebook, 'quote' is usually preferred for text
+                      quote={shareTitle}
+                      // image_url prop is generally ignored by Facebook for rich previews
+                      // Ensure Open Graph meta tags are correctly set on the shared page (StoryPopup.jsx)
                     >
                       <FacebookIcon size={32} round />
                     </FacebookShareButton>
                     <TwitterShareButton
                       url={storyShareUrl}
                       title={shareTitle}
-                      summary={shareDescription}
+                      // Twitter also relies heavily on Twitter Card meta tags for rich previews
                     >
                       <TwitterIcon size={32} round />
                     </TwitterShareButton>
@@ -141,13 +145,14 @@ function OtherBooks() {
                       url={storyShareUrl}
                       title={shareTitle}
                       summary={shareDescription}
+                      // LinkedIn also relies on Open Graph meta tags for rich previews
                     >
                       <LinkedinIcon size={32} round />
                     </LinkedinShareButton>
                     <WhatsappShareButton
                       url={storyShareUrl}
                       title={shareTitle}
-                      summary={shareDescription}
+                      // Whatsapp's preview behavior can vary, often simpler than FB/LI
                     >
                       <WhatsappIcon size={32} round />
                     </WhatsappShareButton>
