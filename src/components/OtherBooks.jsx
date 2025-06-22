@@ -95,7 +95,7 @@ function OtherBooks() {
           return (
             <div
               key={story.id} // Use the unique 'id' from Supabase for React's key prop
-              className="flex gap-6 items-start bg-gray-100 rounded-lg shadow-md p-5 relative flex-wrap"
+              className="flex gap-4 items-start bg-gray-100 rounded-lg shadow-md p-3 relative flex-wrap"
             >
               <img
                 src={story.image_url} // Use the image_url from Supabase
@@ -111,11 +111,11 @@ function OtherBooks() {
                   <p className="italic text-gray-500 mb-3">{story.subtitle}</p>
                 )}
                 <p className="text-gray-700 mb-2">{story.description}</p>
-                <div className="flex items-center gap-4 mt-4 flex-wrap">
+                <div className="flex items-center gap-2 mt-4 flex-wrap">
                   {" "}
                   {/* Container for buttons and social share */}
                   <button
-                    className="text-black px-4 py-2 font-semibold hover:bg-[#E02B20] hover:text-white transition rounded"
+                    className="text-black px-2 py-2 font-semibold hover:bg-[#E02B20] hover:text-white transition rounded"
                     onClick={() => navigate(`/story/${story.id}`)}
                   >
                     Read more...
