@@ -6,7 +6,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ContactMe from "./pages/ContactMe";
 import Articles from "./pages/Articles";
-import NewsEvents from "./pages/NewsEvents";
+import Events from "./pages/Events";
+import Foundation from "./pages/Foundation";
 import Book from "./pages/Books";
 import StoryPopup from "./pages/Story";
 import { useEffect } from "react";
@@ -17,7 +18,6 @@ import AllStories from "./pages/AllStories";
 import FullArticle from "./pages/FullArticle";
 import ArticlesUpload from "./pages/ArticlesUpload";
 import AllArticles from "./pages/AllArticles";
-
 
 function App() {
   // Scroll to top on route change using a custom component
@@ -42,7 +42,8 @@ function App() {
         <Route path="/story/:id" element={<StoryPopup />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactMe />} />
-        <Route path="/events" element={<NewsEvents />} />
+        <Route path="/foundation" element={<Foundation />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/article/:id" element={<FullArticle />} />
         <Route path="/book/:bookId" element={<Book />} />

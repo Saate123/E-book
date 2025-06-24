@@ -14,9 +14,12 @@ const Header = () => {
       ? "text-[#CCFF00] font-bold"
       : "hover:text-[#A72024] transition duration-300";
 
+  // State for mobile books dropdown
+  const [mobileBooksOpen, setMobileBooksOpen] = useState(false);
+
   return (
     <header className="bg-black text-white px-4 py-4 z-50 relative">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="max-w-7xl mx-auto flex justify-between lg:justify-around items-center">
         <h1 className="text-2xl font-serif tracking-wide">LINDA-X</h1>
 
         {/* Desktop Nav */}
@@ -72,8 +75,11 @@ const Header = () => {
           <NavLink to="/articles" className={navClass}>
             Articles
           </NavLink>
+          <NavLink to="/foundation" className={navClass}>
+            Foundation
+          </NavLink>
           <NavLink to="/events" className={navClass}>
-            News & Events
+            Events
           </NavLink>
           <NavLink to="/contact" className={navClass}>
             Contact
@@ -105,38 +111,61 @@ const Header = () => {
                 Home
               </NavLink>
 
-              <div>
+              <div className="relative group dropdown-container">
                 <span
-                  className={`flex items-center transition duration-300 ${
+                  className={`flex items-center cursor-pointer transition duration-300 ${
                     isBookRoute
                       ? "text-[#CCFF00] font-bold"
                       : "hover:text-[#A72024]"
                   }`}
+                  onClick={() => setMobileBooksOpen((prev) => !prev)}
                 >
                   Books <RiArrowDownSLine className="ml-2" />
                 </span>
-                <ul className="ml-4 mt-2 space-y-2 text-sm">
-                  <li>
-                    <NavLink
-                      to="/book/woyingi-god-is-a-woman"
-                      className={navClass}
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Woyingi: God is a Woman
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/book/tari-ere-the-picky-virgin"
-                      className={navClass}
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Tari-Ere: The Picky Virgin
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
 
+                {mobileBooksOpen && (
+                  <div className="dropdown-menu">
+                    <ul className="space-y-2 text-white text-sm tracking-wide">
+                      <li>
+                        <NavLink
+                          to="/book/woyingi-god-is-a-woman"
+                          className={navClass}
+                          onClick={() => {
+                            setMenuOpen(false);
+                            setMobileBooksOpen(false);
+                          }}
+                        >
+                          Tamara: The Gender of God
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/book/tari-ere-the-picky-virgin"
+                          className={navClass}
+                          onClick={() => {
+                            setMenuOpen(false);
+                            setMobileBooksOpen(false);
+                          }}
+                        >
+                          She Who Loved A Lie
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/book/the-square-of-lost-sons"
+                          className={navClass}
+                          onClick={() => {
+                            setMenuOpen(false);
+                            setMobileBooksOpen(false);
+                          }}
+                        >
+                          The Square Of Lost Sons
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
               <NavLink
                 to="/about"
                 className={navClass}
@@ -151,12 +180,11 @@ const Header = () => {
               >
                 Articles
               </NavLink>
-              <NavLink
-                to="/events"
-                className={navClass}
-                onClick={() => setMenuOpen(false)}
-              >
-                News & Events
+              <NavLink to="/foundation" className={navClass}>
+                Foundation
+              </NavLink>
+              <NavLink to="/events" className={navClass}>
+                Events
               </NavLink>
               <NavLink
                 to="/contact"

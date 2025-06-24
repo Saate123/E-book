@@ -9,7 +9,7 @@ export const heroSections = [
   {
     id: "woyingi-god-is-a-woman",
     title:
-      "Another book in Linda’s captivating folktale series, Tamara: The Gender of God, is out now!",
+      "One of Linda's captivating folktale series, Tamara: The Gender of God, is out now!",
     description:
       "“A thought-provoking exploration of the Divine, weaving together history, spirituality, and culture. A powerful narrative that challenges perceptions and celebrates the sacred feminine.”",
     link: "/book/woyingi-god-is-a-woman",
