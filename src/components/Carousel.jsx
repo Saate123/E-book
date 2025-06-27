@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import Img from "../assets/background.jpg"
-import Img2 from "../assets/background2.webp"
-import Img3 from "../assets/background3.jpg"
+import Img from "../assets/griot3.png"
+import Img2 from "../assets/griot2.png"
+import Img3 from "../assets/groit1.png"
 
 const images = [
   Img,
@@ -25,11 +25,11 @@ const Carousel = ({ interval = 3000 }) => {
   const goToSlide = (idx) => setCurrent(idx);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full ">
       <img
         src={images[current]}
         alt={`Slide ${current + 1}`}
-        className="w-full h-90 object-cover transition-opacity duration-500"
+        className="w-full h-90 object-center transition-opacity duration-500"
       />
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, idx) => (

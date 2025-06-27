@@ -22,7 +22,6 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex justify-between lg:justify-around items-center">
         <h1 className="text-2xl font-serif tracking-wide">LINDA-X</h1>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm uppercase font-medium">
           <NavLink to="/" className={navClass}>
             Home
@@ -72,14 +71,23 @@ const Header = () => {
           <NavLink to="/about" className={navClass}>
             About
           </NavLink>
-          <NavLink to="/articles" className={navClass}>
-            Articles
+          <NavLink
+            to="#other-books"
+            className="bg-[#A72024] text-white rounded px-1"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("other-books");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              } else {
+                window.location.href = "/";
+              }
+            }}
+          >
+            Short Stories
           </NavLink>
           <NavLink to="/foundation" className={navClass}>
             Foundation
-          </NavLink>
-          <NavLink to="/events" className={navClass}>
-            Events
           </NavLink>
           <NavLink to="/contact" className={navClass}>
             Contact
@@ -174,17 +182,24 @@ const Header = () => {
                 About
               </NavLink>
               <NavLink
-                to="/articles"
-                className={navClass}
-                onClick={() => setMenuOpen(false)}
+                to="#other-books"
+                className="bg-[#A72024] text-white rounded px-1"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById("other-books");
+                  setMenuOpen(false);
+                  setMobileBooksOpen(false);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  } else {
+                    window.location.href = "/";
+                  }
+                }}
               >
-                Articles
+                Short Stories
               </NavLink>
               <NavLink to="/foundation" className={navClass}>
                 Foundation
-              </NavLink>
-              <NavLink to="/events" className={navClass}>
-                Events
               </NavLink>
               <NavLink
                 to="/contact"

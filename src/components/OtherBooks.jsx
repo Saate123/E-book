@@ -82,11 +82,11 @@ function OtherBooks() {
   }
 
   return (
-    <div className="max-w-screen p-10 bg-black relative">
+    <div className="max-w-screen p-10 bg-black relative" id="other-books">
       <h1 className="text-center text-3xl md:text-5xl mb-10 text-[#E02B20]">
         Short Stories By Linda
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 transition-all duration-300">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 transition-all duration-300">
         {stories.map((story) => {
           const storyShareUrl = `https://linda-x.com/#/story/${story.id}`;
           const shareTitle = `Read "${story.title}" by Linda on My Ebook Site!`; // Customize share title
@@ -119,7 +119,7 @@ function OtherBooks() {
                     onClick={() => navigate(`/story/${story.id}`)}
                   >
                     Read more...
-                  </button> 
+                  </button>
                   <h5 className="font-bold">OR</h5>
                   {/* Share Buttons */}
                   <div className="flex gap-2 items-center">
