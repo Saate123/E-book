@@ -41,6 +41,54 @@ function AboutFdn() {
             </div>
           </div>
         </div>
+        <div className="max-w-6xl mx-auto mt-10">
+          <div className="bg-[#A72024] text-center text-white p-4 rounded-lg shadow mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold">The Crises</h2>
+          </div>
+          <div className="flex flex-col md:flex-row md:justify-between items-center md:items-start w-full gap-8 mt-4">
+            <div className="flex-1 max-w-full md:max-w-[48%] lg:max-w-[50%] text-center md:text-left">
+              <h3 className="text-xl text-[#A72024] sm:text-2xl font-semibold mb-4">
+                When a Child Forgets Their Story, They Forget Their Worth.
+              </h3>
+              <p className="text-white leading-relaxed text-base sm:text-lg">
+                Across Africa—and indeed the world—children and youth,
+                especially those impacted by violence, are growing up
+                disconnected from the values, etiquette, and cultural identity
+                that once anchored their communities.
+              </p>
+            </div>
+            <div className="flex-1 max-w-full md:max-w-[48%] lg:max-w-[50%] text-center md:text-left">
+              <p className="text-xl text-white sm:text-lg font-medium mb-4">
+                This has led to:
+              </p>
+              <div className="bg-white text-[#A72024]  italic rounded-md p-2 shadow-lg text-left">
+                <li>Rising youth violence, trauma, and loss of identity</li>
+              </div>
+              <div className="bg-white text-[#A72024] italic rounded-md p-2 shadow-lg text-left mt-2">
+                <li>Erosion of traditional etiquette and moral foundations</li>
+              </div>
+              <div className="bg-white text-[#A72024] italic rounded-md p-2 shadow-lg text-left mt-2">
+                <li>
+                  Loss of cultural identity, weakened moral guidance, fading
+                  languages, stifled imagination, and broken inter-generational
+                  bonds
+                </li>
+              </div>
+              <div className="bg-white text-[#A72024] italic rounded-md p-2 shadow-lg text-left mt-2">
+                <li>
+                  Absence of culturally rooted healing and mentorship pathways
+                </li>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 text-center text-white">
+            <p>
+              We are witnessing the rise of generations who no longer remember
+              who they are—and in forgetting their stories, risk forgetting
+              their worth.
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );
