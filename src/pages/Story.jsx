@@ -102,7 +102,8 @@ function StoryPopup() {
 
   const storyShareUrl = `https://linda-x.com/#/story/${id}`;
   const shareTitle = `Read "${story.title}" by Linda on My Ebook Site!`;
-  const shareDescription = story?.content?.slice(0, 100) + (story?.content?.length > 100 ? "..." : "");
+  const shareDescription =
+    story?.content?.slice(0, 100) + (story?.content?.length > 100 ? "..." : "");
 
   // --- Main Render for Displaying the Story ---
   return (
@@ -145,9 +146,8 @@ function StoryPopup() {
           style={{
             fontSize: "1.1rem",
           }}
-        >
-          {story.content}
-        </div>
+          dangerouslySetInnerHTML={{ __html: story.content }}
+        />
 
         {/* Share write-up */}
         <div className="mt-6 mb-2 text-[#E02B20] font-semibold text-base">
