@@ -89,6 +89,9 @@ const Header = () => {
           <NavLink to="/foundation" className={navClass}>
             Foundation
           </NavLink>
+          <NavLink to="/videos" className={navClass}>
+            Videos
+          </NavLink>
           <NavLink to="/contact" className={navClass}>
             Contact
           </NavLink>
@@ -200,6 +203,9 @@ const Header = () => {
               </NavLink>
               <NavLink to="/foundation" className={navClass}>
                 Foundation
+              </NavLink>
+              <NavLink to="/videos" className={navClass}>
+                Videos
               </NavLink>
               <NavLink
                 to="/contact"

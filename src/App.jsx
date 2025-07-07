@@ -18,6 +18,7 @@ import AllStories from "./pages/AllStories";
 import FullArticle from "./pages/FullArticle";
 import ArticlesUpload from "./pages/ArticlesUpload";
 import AllArticles from "./pages/AllArticles";
+import Videos from "./pages/Videos";
 
 function App() {
   // Scroll to top on route change using a custom component
@@ -43,7 +44,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactMe />} />
         <Route path="/foundation" element={<Foundation />} />
-        {/* <Route path="/events" element={<Events />} /> */}
+        <Route path="/videos" element={<Videos />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/article/:id" element={<FullArticle />} />
         <Route path="/book/:bookId" element={<Book />} />
